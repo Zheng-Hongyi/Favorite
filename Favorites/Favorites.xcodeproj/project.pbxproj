@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A3030CCE1C8BD7F500134CCA /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3030CCD1C8BD7F500134CCA /* GroupCell.swift */; };
+		A3030CD11C8BE4EF00134CCA /* FavoriteGroupDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3030CD01C8BE4EF00134CCA /* FavoriteGroupDetailVC.swift */; };
+		A3030CD41C8BE78100134CCA /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3030CD31C8BE78100134CCA /* Favorite.swift */; };
+		A3030CD71C8C1A7400134CCA /* BaseCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3030CD61C8C1A7400134CCA /* BaseCache.swift */; };
+		A3030CD91C8C1C9D00134CCA /* CacheBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3030CD81C8C1C9D00134CCA /* CacheBus.swift */; };
+		A3030CDB1C8C1CB600134CCA /* CacheFavorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3030CDA1C8C1CB600134CCA /* CacheFavorite.swift */; };
+		A3030CDD1C8C3D8000134CCA /* CacheCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3030CDC1C8C3D8000134CCA /* CacheCategory.swift */; };
+		A3030CDF1C8C3F3C00134CCA /* FavoriteCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3030CDE1C8C3F3C00134CCA /* FavoriteCategory.swift */; };
+		A3030CE21C8C722E00134CCA /* AddFavoriteCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3030CE11C8C722E00134CCA /* AddFavoriteCategoryVC.swift */; };
 		A3C9C71A1C7873980091CAB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C9C7191C7873980091CAB5 /* AppDelegate.swift */; };
 		A3C9C71C1C7873980091CAB5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C9C71B1C7873980091CAB5 /* ViewController.swift */; };
 		A3C9C71F1C7873980091CAB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3C9C71D1C7873980091CAB5 /* Main.storyboard */; };
@@ -19,6 +28,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A3030CCD1C8BD7F500134CCA /* GroupCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
+		A3030CD01C8BE4EF00134CCA /* FavoriteGroupDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteGroupDetailVC.swift; sourceTree = "<group>"; };
+		A3030CD31C8BE78100134CCA /* Favorite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
+		A3030CD61C8C1A7400134CCA /* BaseCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCache.swift; sourceTree = "<group>"; };
+		A3030CD81C8C1C9D00134CCA /* CacheBus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheBus.swift; sourceTree = "<group>"; };
+		A3030CDA1C8C1CB600134CCA /* CacheFavorite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheFavorite.swift; sourceTree = "<group>"; };
+		A3030CDC1C8C3D8000134CCA /* CacheCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheCategory.swift; sourceTree = "<group>"; };
+		A3030CDE1C8C3F3C00134CCA /* FavoriteCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteCategory.swift; sourceTree = "<group>"; };
+		A3030CE11C8C722E00134CCA /* AddFavoriteCategoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFavoriteCategoryVC.swift; sourceTree = "<group>"; };
 		A3C9C7161C7873970091CAB5 /* Favorites.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Favorites.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3C9C7191C7873980091CAB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3C9C71B1C7873980091CAB5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +61,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A3030CCF1C8BE08400134CCA /* FavoriteGroupDetailVC */ = {
+			isa = PBXGroup;
+			children = (
+				A3030CD01C8BE4EF00134CCA /* FavoriteGroupDetailVC.swift */,
+			);
+			path = FavoriteGroupDetailVC;
+			sourceTree = "<group>";
+		};
+		A3030CD21C8BE6E600134CCA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A3030CD31C8BE78100134CCA /* Favorite.swift */,
+				A3030CDE1C8C3F3C00134CCA /* FavoriteCategory.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A3030CD51C8C1A5600134CCA /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				A3030CD61C8C1A7400134CCA /* BaseCache.swift */,
+				A3030CD81C8C1C9D00134CCA /* CacheBus.swift */,
+				A3030CDA1C8C1CB600134CCA /* CacheFavorite.swift */,
+				A3030CDC1C8C3D8000134CCA /* CacheCategory.swift */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		A3030CE01C8C720A00134CCA /* AddFavoriteItemVC */ = {
+			isa = PBXGroup;
+			children = (
+				A3030CE11C8C722E00134CCA /* AddFavoriteCategoryVC.swift */,
+			);
+			path = AddFavoriteItemVC;
+			sourceTree = "<group>";
+		};
 		A3C9C70D1C7873970091CAB5 = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +116,8 @@
 		A3C9C7181C7873970091CAB5 /* Favorites */ = {
 			isa = PBXGroup;
 			children = (
+				A3030CD51C8C1A5600134CCA /* Cache */,
+				A3030CD21C8BE6E600134CCA /* Model */,
 				A3C9C7321C794C610091CAB5 /* VC */,
 				A3C9C72B1C79498D0091CAB5 /* Base */,
 				A3C9C7191C7873980091CAB5 /* AppDelegate.swift */,
@@ -87,6 +143,8 @@
 		A3C9C7321C794C610091CAB5 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				A3030CE01C8C720A00134CCA /* AddFavoriteItemVC */,
+				A3030CCF1C8BE08400134CCA /* FavoriteGroupDetailVC */,
 				A3C9C7331C794C700091CAB5 /* FavoriteHomeVC */,
 			);
 			path = VC;
@@ -96,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				A3C9C7341C794C950091CAB5 /* FavoriteHomeVC.swift */,
+				A3030CCD1C8BD7F500134CCA /* GroupCell.swift */,
 			);
 			path = FavoriteHomeVC;
 			sourceTree = "<group>";
@@ -171,12 +230,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3030CCE1C8BD7F500134CCA /* GroupCell.swift in Sources */,
 				A3C9C72F1C7949C50091CAB5 /* BaseTVC.swift in Sources */,
+				A3030CDB1C8C1CB600134CCA /* CacheFavorite.swift in Sources */,
+				A3030CE21C8C722E00134CCA /* AddFavoriteCategoryVC.swift in Sources */,
 				A3C9C71C1C7873980091CAB5 /* ViewController.swift in Sources */,
 				A3C9C72D1C7949A70091CAB5 /* BaseVC.swift in Sources */,
+				A3030CD91C8C1C9D00134CCA /* CacheBus.swift in Sources */,
 				A3C9C7311C7949E50091CAB5 /* BaseNavigationController.swift in Sources */,
+				A3030CD71C8C1A7400134CCA /* BaseCache.swift in Sources */,
+				A3030CDD1C8C3D8000134CCA /* CacheCategory.swift in Sources */,
 				A3C9C71A1C7873980091CAB5 /* AppDelegate.swift in Sources */,
+				A3030CD41C8BE78100134CCA /* Favorite.swift in Sources */,
+				A3030CDF1C8C3F3C00134CCA /* FavoriteCategory.swift in Sources */,
 				A3C9C7351C794C950091CAB5 /* FavoriteHomeVC.swift in Sources */,
+				A3030CD11C8BE4EF00134CCA /* FavoriteGroupDetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +394,7 @@
 				A3C9C72A1C7873980091CAB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
