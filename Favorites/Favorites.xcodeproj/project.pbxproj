@@ -16,6 +16,7 @@
 		A3030CDD1C8C3D8000134CCA /* CacheCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3030CDC1C8C3D8000134CCA /* CacheCategory.swift */; };
 		A3030CDF1C8C3F3C00134CCA /* FavoriteCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3030CDE1C8C3F3C00134CCA /* FavoriteCategory.swift */; };
 		A3030CE21C8C722E00134CCA /* AddFavoriteCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3030CE11C8C722E00134CCA /* AddFavoriteCategoryVC.swift */; };
+		A31C49EA1C95B85600232775 /* AddFavoriteItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31C49E91C95B85600232775 /* AddFavoriteItemVC.swift */; };
 		A3C9C71A1C7873980091CAB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C9C7191C7873980091CAB5 /* AppDelegate.swift */; };
 		A3C9C71C1C7873980091CAB5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C9C71B1C7873980091CAB5 /* ViewController.swift */; };
 		A3C9C71F1C7873980091CAB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3C9C71D1C7873980091CAB5 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 		A3030CDC1C8C3D8000134CCA /* CacheCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheCategory.swift; sourceTree = "<group>"; };
 		A3030CDE1C8C3F3C00134CCA /* FavoriteCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteCategory.swift; sourceTree = "<group>"; };
 		A3030CE11C8C722E00134CCA /* AddFavoriteCategoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFavoriteCategoryVC.swift; sourceTree = "<group>"; };
+		A31C49E91C95B85600232775 /* AddFavoriteItemVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFavoriteItemVC.swift; sourceTree = "<group>"; };
 		A3C9C7161C7873970091CAB5 /* Favorites.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Favorites.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3C9C7191C7873980091CAB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3C9C71B1C7873980091CAB5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -93,8 +95,16 @@
 			isa = PBXGroup;
 			children = (
 				A3030CE11C8C722E00134CCA /* AddFavoriteCategoryVC.swift */,
+				A31C49E91C95B85600232775 /* AddFavoriteItemVC.swift */,
 			);
 			path = AddFavoriteItemVC;
+			sourceTree = "<group>";
+		};
+		A31C49EB1C95BB7500232775 /* FavoriteDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FavoriteDetail;
 			sourceTree = "<group>";
 		};
 		A3C9C70D1C7873970091CAB5 = {
@@ -143,6 +153,7 @@
 		A3C9C7321C794C610091CAB5 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				A31C49EB1C95BB7500232775 /* FavoriteDetail */,
 				A3030CE01C8C720A00134CCA /* AddFavoriteItemVC */,
 				A3030CCF1C8BE08400134CCA /* FavoriteGroupDetailVC */,
 				A3C9C7331C794C700091CAB5 /* FavoriteHomeVC */,
@@ -191,6 +202,7 @@
 				TargetAttributes = {
 					A3C9C7151C7873970091CAB5 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = XTP2299ZCK;
 					};
 				};
 			};
@@ -233,6 +245,7 @@
 				A3030CCE1C8BD7F500134CCA /* GroupCell.swift in Sources */,
 				A3C9C72F1C7949C50091CAB5 /* BaseTVC.swift in Sources */,
 				A3030CDB1C8C1CB600134CCA /* CacheFavorite.swift in Sources */,
+				A31C49EA1C95B85600232775 /* AddFavoriteItemVC.swift in Sources */,
 				A3030CE21C8C722E00134CCA /* AddFavoriteCategoryVC.swift in Sources */,
 				A3C9C71C1C7873980091CAB5 /* ViewController.swift in Sources */,
 				A3C9C72D1C7949A70091CAB5 /* BaseVC.swift in Sources */,
@@ -287,6 +300,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -331,6 +345,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -355,6 +370,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Favorites/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -367,6 +383,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Favorites/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
