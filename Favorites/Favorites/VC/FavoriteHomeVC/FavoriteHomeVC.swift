@@ -10,7 +10,7 @@ import UIKit
 
 class FavoriteHomeVC: BaseTVC {
     
-    var groupNames = [String]();
+    var groupNames = [FavoriteCategory]();
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,10 +27,10 @@ class FavoriteHomeVC: BaseTVC {
     
     // MARK: - Private methods
     func loadGroupNames () {
-        let nameOne = "运动健身";
-        let nameTwo = "旅行";
-        let nameThree = "学习";
-        groupNames += [nameOne, nameTwo, nameThree];
+        let categoryOne = FavoriteCategory(tmpName: "xuexi");
+        let categoryTwo = FavoriteCategory(tmpName: "luxing");
+        let categoryThree = FavoriteCategory(tmpName: "yule");
+        groupNames += [categoryOne, categoryTwo, categoryThree];
     }
     
     @IBAction func addFavoriteCategory(sender: AnyObject) {
@@ -55,7 +55,7 @@ class FavoriteHomeVC: BaseTVC {
         let cellIdentifier = "GroupCell";
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! GroupCell;
         let groupName = groupNames[indexPath.row];
-        cell.groupNameLabel.text = groupName;
+        cell.groupNameLabel.text = groupName.categoryName;
         return cell
     }
     
@@ -94,15 +94,34 @@ class FavoriteHomeVC: BaseTVC {
     return true
     }
     */
+    
+    @IBAction func unwindToHomeList(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.sourceViewController as? AddFavoriteCategoryVC, needAddedCategory = sourceViewController.currentCategory {
+            groupNames.append(needAddedCategory)
+            tableView.reloadData()
+            
+        }
+    }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "ShowDetailGroup" {
+            let groupDetailViewController = segue.destinationViewController as! FavoriteGroupDetailVC
+            if let selectedCell = sender as? GroupCell {
+                let indexPath = tableView.indexPathForCell(selectedCell)!
+                let selectedCategory = groupNames[indexPath.row]
+                groupDetailViewController.currentGropCategory = selectedCategory
+            }
+        
+        } else if segue.identifier == "AddGroup" {
+            
+        }
     }
-    */
+
 
 }
