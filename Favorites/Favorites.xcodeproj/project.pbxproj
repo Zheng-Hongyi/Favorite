@@ -202,11 +202,7 @@
 				TargetAttributes = {
 					A3C9C7151C7873970091CAB5 = {
 						CreatedOnToolsVersion = 7.2;
-<<<<<<< HEAD
-						DevelopmentTeam = 7T366LQLPX;
-=======
 						DevelopmentTeam = XTP2299ZCK;
->>>>>>> 69594dba11e39bda55e0ebd5e93fe1dbffa67c8e
 					};
 				};
 			};
