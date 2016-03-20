@@ -11,7 +11,7 @@ import UIKit
 class CacheFavorite: BaseCache {
     
     func cacheFavorites(favorites:[Favorite],groupName:String) {
-        self .cacheObjects(favorites, cacheKey: groupName)
+        self.cacheObjects(favorites, cacheKey: groupName)
     }
     
     func loadCachedFavoritesForKey(cacheKey:String) -> AnyObject {

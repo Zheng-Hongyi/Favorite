@@ -10,7 +10,9 @@ import UIKit
 
 class FavoriteHomeVC: BaseTVC {
     
-    var groupNames = [FavoriteCategory]();
+    var groupNames = [FavoriteCategory]()
+    
+    let userKey = "addmin"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +20,7 @@ class FavoriteHomeVC: BaseTVC {
         // Do any additional setup after loading the view.
         self.title = "首页";
         loadGroupNames();
+        configView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,12 +28,25 @@ class FavoriteHomeVC: BaseTVC {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
+    
     // MARK: - Private methods
     func loadGroupNames () {
-        let categoryOne = FavoriteCategory(tmpName: "xuexi");
-        let categoryTwo = FavoriteCategory(tmpName: "luxing");
-        let categoryThree = FavoriteCategory(tmpName: "yule");
-        groupNames += [categoryOne, categoryTwo, categoryThree];
+        //groupNames = CacheBus.sharedInstance.favoriteCategory.loadCachedFavoriteCategoriesForKey(userKey) as! [FavoriteCategory]
+        if groupNames.count == 0 {
+            let categoryOne = FavoriteCategory(tmpName: "xuexi");
+            let categoryTwo = FavoriteCategory(tmpName: "luxing");
+            let categoryThree = FavoriteCategory(tmpName: "yule");
+            groupNames += [categoryOne, categoryTwo, categoryThree];
+
+        }
+    }
+    
+    func configView () {
+        tableView.tableFooterView = UIView.init();
     }
     
     @IBAction func addFavoriteCategory(sender: AnyObject) {
@@ -99,6 +115,7 @@ class FavoriteHomeVC: BaseTVC {
         if let sourceViewController = sender.sourceViewController as? AddFavoriteCategoryVC, needAddedCategory = sourceViewController.currentCategory {
             groupNames.append(needAddedCategory)
             tableView.reloadData()
+            CacheBus.sharedInstance.favoriteCategory.cacheFavoriteCategories(groupNames, cacheKey: userKey)
             
         }
     }

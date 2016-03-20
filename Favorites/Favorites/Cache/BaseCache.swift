@@ -10,12 +10,14 @@ import UIKit
 
 class BaseCache: NSObject {
     // MARK: Archiving Paths
-    var cacheDirectiory = "caches/favorite/1"
+    var cacheDirectiory = "/Library/Caches/favorite/1/"
     
     func cacheObjects(source:AnyObject!,cacheKey:String) {
         dispatch_async(dispatch_get_global_queue(0, 0)) { () -> Void in
             let fileFullPath = self.generateFileInDir(self.cacheDirectiory, fileName: cacheKey)
             let isSuccess = NSKeyedArchiver.archiveRootObject(source, toFile: fileFullPath)
+            print(source)
+            print(fileFullPath)
             if !isSuccess {
                 print("failed")
             }
@@ -30,18 +32,19 @@ class BaseCache: NSObject {
     
     internal func generateFileInDir(dir:String,fileName:String) ->String {
         let manager = NSFileManager.defaultManager();
-        let tmp = manager.URLsForDirectory(NSSearchPathDirectory.ApplicationSupportDirectory, inDomains: NSSearchPathDomainMask.UserDomainMask).first
-        let urlsForLibrary = tmp! as NSURL
-        let folder = urlsForLibrary.URLByAppendingPathComponent(cacheDirectiory, isDirectory: true)
-        let hasDirectory = manager.fileExistsAtPath(folder.absoluteString)
+//        let tmp = manager.URLsForDirectory(NSSearchPathDirectory.ApplicationSupportDirectory, inDomains: NSSearchPathDomainMask.UserDomainMask).first
+        //let urlsForLibrary = tmp! as NSURL
+        let urlsForLibrary = NSHomeDirectory();
+        let folder = urlsForLibrary + cacheDirectiory;
+        let hasDirectory = manager.fileExistsAtPath(folder)
         if !hasDirectory {
             do {
-                try manager.createDirectoryAtURL(folder, withIntermediateDirectories: true, attributes: nil)
+                try manager.createDirectoryAtPath(folder, withIntermediateDirectories: false, attributes: nil)
             } catch {
             
             }
         }
-        return folder.URLByAppendingPathComponent(fileName).absoluteString
+        return folder + fileName;
     }
 
 }

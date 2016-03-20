@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FA2BE8E1C9CF7EB0095CA45 /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA2BE8D1C9CF7EB0095CA45 /* FavoriteCell.swift */; };
+		0FA2BE901C9CFC820095CA45 /* FavoriteDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA2BE8F1C9CFC820095CA45 /* FavoriteDetailVC.swift */; };
 		A3030CCE1C8BD7F500134CCA /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3030CCD1C8BD7F500134CCA /* GroupCell.swift */; };
 		A3030CD11C8BE4EF00134CCA /* FavoriteGroupDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3030CD01C8BE4EF00134CCA /* FavoriteGroupDetailVC.swift */; };
 		A3030CD41C8BE78100134CCA /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3030CD31C8BE78100134CCA /* Favorite.swift */; };
@@ -29,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0FA2BE8D1C9CF7EB0095CA45 /* FavoriteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
+		0FA2BE8F1C9CFC820095CA45 /* FavoriteDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavoriteDetailVC.swift; path = Favorites/VC/FavoriteGroupDetailVC/FavoriteDetailVC.swift; sourceTree = SOURCE_ROOT; };
 		A3030CCD1C8BD7F500134CCA /* GroupCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
 		A3030CD01C8BE4EF00134CCA /* FavoriteGroupDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteGroupDetailVC.swift; sourceTree = "<group>"; };
 		A3030CD31C8BE78100134CCA /* Favorite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
@@ -67,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				A3030CD01C8BE4EF00134CCA /* FavoriteGroupDetailVC.swift */,
+				0FA2BE8D1C9CF7EB0095CA45 /* FavoriteCell.swift */,
 			);
 			path = FavoriteGroupDetailVC;
 			sourceTree = "<group>";
@@ -103,6 +108,7 @@
 		A31C49EB1C95BB7500232775 /* FavoriteDetail */ = {
 			isa = PBXGroup;
 			children = (
+				0FA2BE8F1C9CFC820095CA45 /* FavoriteDetailVC.swift */,
 			);
 			path = FavoriteDetail;
 			sourceTree = "<group>";
@@ -257,7 +263,9 @@
 				A3030CD41C8BE78100134CCA /* Favorite.swift in Sources */,
 				A3030CDF1C8C3F3C00134CCA /* FavoriteCategory.swift in Sources */,
 				A3C9C7351C794C950091CAB5 /* FavoriteHomeVC.swift in Sources */,
+				0FA2BE901C9CFC820095CA45 /* FavoriteDetailVC.swift in Sources */,
 				A3030CD11C8BE4EF00134CCA /* FavoriteGroupDetailVC.swift in Sources */,
+				0FA2BE8E1C9CF7EB0095CA45 /* FavoriteCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,9 +380,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: zheng yi (J7EN8LGLQW)";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Favorites/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -388,9 +395,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: zheng yi (J7EN8LGLQW)";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Favorites/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

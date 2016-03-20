@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="g35-i0-Jo1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="g35-i0-Jo1">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -129,10 +129,10 @@
             </objects>
             <point key="canvasLocation" x="1430" y="1999"/>
         </scene>
-        <!--View Controller-->
+        <!--Favorite DetailVC-->
         <scene sceneID="WdQ-1W-p37">
             <objects>
-                <viewController id="y8Q-8e-WRp" sceneMemberID="viewController">
+                <viewController id="y8Q-8e-WRp" customClass="FavoriteDetailVC" customModule="Favorites" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gP1-pC-u5i"/>
                         <viewControllerLayoutGuide type="bottom" id="iFk-S7-xpx"/>
@@ -142,19 +142,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eNV-hi-5qb">
-                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="eNV-hi-5qb" firstAttribute="top" secondItem="gP1-pC-u5i" secondAttribute="bottom" id="4iu-QV-cD1"/>
+                            <constraint firstItem="eNV-hi-5qb" firstAttribute="top" secondItem="gP1-pC-u5i" secondAttribute="bottom" constant="-64" id="4iu-QV-cD1"/>
                             <constraint firstItem="iFk-S7-xpx" firstAttribute="top" secondItem="eNV-hi-5qb" secondAttribute="bottom" id="7jr-2W-BmV"/>
                             <constraint firstAttribute="trailing" secondItem="eNV-hi-5qb" secondAttribute="trailing" id="bVc-w6-bUo"/>
                             <constraint firstItem="eNV-hi-5qb" firstAttribute="leading" secondItem="6DN-uY-hv2" secondAttribute="leading" id="lyi-CO-mZn"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="k93-09-hl1"/>
+                    <connections>
+                        <outlet property="mainWeb" destination="eNV-hi-5qb" id="6GD-Tc-C2Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EhV-0F-aEA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -169,15 +172,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="C0q-Ci-JkR">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="FavoriteCell" id="C0q-Ci-JkR" customClass="FavoriteCell" customModule="Favorites" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="C0q-Ci-JkR" id="WaZ-pB-G9p">
                                     <rect key="frame" x="0.0" y="0.0" width="381" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbi-kn-yKO">
+                                            <rect key="frame" x="14" y="0.0" width="359" height="44"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="sbi-kn-yKO" secondAttribute="trailing" id="4qd-MT-5u4"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="sbi-kn-yKO" secondAttribute="bottom" constant="-8" id="JTd-GQ-hyk"/>
+                                        <constraint firstItem="sbi-kn-yKO" firstAttribute="leading" secondItem="WaZ-pB-G9p" secondAttribute="leadingMargin" constant="6" id="JWG-8m-UGq"/>
+                                        <constraint firstItem="sbi-kn-yKO" firstAttribute="top" secondItem="WaZ-pB-G9p" secondAttribute="topMargin" constant="-8" id="drT-rl-bNZ"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="y8Q-8e-WRp" kind="push" id="hGG-tv-dpx"/>
+                                    <outlet property="favoriteNameLabel" destination="sbi-kn-yKO" id="na0-Y8-3MF"/>
+                                    <segue destination="y8Q-8e-WRp" kind="push" identifier="enterFavoriteDetail" id="hGG-tv-dpx"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -248,15 +266,20 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="保存" id="Pmt-tZ-GjX">
                             <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="x9z-Jg-22K" kind="unwind" unwindAction="unwindToDetailList:" id="TQ7-To-Ubs"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="itemLInkTextFiled" destination="qM1-Pz-xXX" id="ZLJ-KT-gNc"/>
                         <outlet property="itemNameTextFiled" destination="dSE-zJ-ZDD" id="ykc-vM-UFr"/>
+                        <outlet property="saveButton" destination="Pmt-tZ-GjX" id="Kmd-Ft-hrI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FR7-cx-jSG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="x9z-Jg-22K" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1949" y="93"/>
         </scene>
