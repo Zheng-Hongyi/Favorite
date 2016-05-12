@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		0FA2BE8E1C9CF7EB0095CA45 /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA2BE8D1C9CF7EB0095CA45 /* FavoriteCell.swift */; };
 		0FA2BE901C9CFC820095CA45 /* FavoriteDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA2BE8F1C9CFC820095CA45 /* FavoriteDetailVC.swift */; };
+		0FA724AC1CE4C96E00557725 /* CacheBus.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA724AB1CE4C96E00557725 /* CacheBus.m */; };
+		0FA724AF1CE4C98800557725 /* CacheBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA724AE1CE4C98800557725 /* CacheBase.m */; };
+		0FA724B21CE4C9B500557725 /* CacheCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA724B11CE4C9B500557725 /* CacheCategory.m */; };
+		0FA724B51CE4C9C800557725 /* CacheFavorite.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA724B41CE4C9C800557725 /* CacheFavorite.m */; };
 		A3030CCE1C8BD7F500134CCA /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3030CCD1C8BD7F500134CCA /* GroupCell.swift */; };
 		A3030CD11C8BE4EF00134CCA /* FavoriteGroupDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3030CD01C8BE4EF00134CCA /* FavoriteGroupDetailVC.swift */; };
 		A3030CD41C8BE78100134CCA /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3030CD31C8BE78100134CCA /* Favorite.swift */; };
-		A3030CD71C8C1A7400134CCA /* BaseCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3030CD61C8C1A7400134CCA /* BaseCache.swift */; };
-		A3030CD91C8C1C9D00134CCA /* CacheBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3030CD81C8C1C9D00134CCA /* CacheBus.swift */; };
-		A3030CDB1C8C1CB600134CCA /* CacheFavorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3030CDA1C8C1CB600134CCA /* CacheFavorite.swift */; };
-		A3030CDD1C8C3D8000134CCA /* CacheCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3030CDC1C8C3D8000134CCA /* CacheCategory.swift */; };
 		A3030CDF1C8C3F3C00134CCA /* FavoriteCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3030CDE1C8C3F3C00134CCA /* FavoriteCategory.swift */; };
 		A3030CE21C8C722E00134CCA /* AddFavoriteCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3030CE11C8C722E00134CCA /* AddFavoriteCategoryVC.swift */; };
 		A31C49EA1C95B85600232775 /* AddFavoriteItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31C49E91C95B85600232775 /* AddFavoriteItemVC.swift */; };
@@ -33,13 +33,19 @@
 /* Begin PBXFileReference section */
 		0FA2BE8D1C9CF7EB0095CA45 /* FavoriteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
 		0FA2BE8F1C9CFC820095CA45 /* FavoriteDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavoriteDetailVC.swift; path = Favorites/VC/FavoriteGroupDetailVC/FavoriteDetailVC.swift; sourceTree = SOURCE_ROOT; };
+		0FA724A91CE4C96D00557725 /* Favorites-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Favorites-Bridging-Header.h"; sourceTree = "<group>"; };
+		0FA724AA1CE4C96E00557725 /* CacheBus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheBus.h; sourceTree = "<group>"; };
+		0FA724AB1CE4C96E00557725 /* CacheBus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheBus.m; sourceTree = "<group>"; };
+		0FA724AD1CE4C98800557725 /* CacheBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheBase.h; sourceTree = "<group>"; };
+		0FA724AE1CE4C98800557725 /* CacheBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheBase.m; sourceTree = "<group>"; };
+		0FA724B01CE4C9B500557725 /* CacheCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheCategory.h; sourceTree = "<group>"; };
+		0FA724B11CE4C9B500557725 /* CacheCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheCategory.m; sourceTree = "<group>"; };
+		0FA724B31CE4C9C800557725 /* CacheFavorite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheFavorite.h; sourceTree = "<group>"; };
+		0FA724B41CE4C9C800557725 /* CacheFavorite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheFavorite.m; sourceTree = "<group>"; };
+		0FA724B71CE4CC3C00557725 /* kDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kDefine.h; sourceTree = "<group>"; };
 		A3030CCD1C8BD7F500134CCA /* GroupCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
 		A3030CD01C8BE4EF00134CCA /* FavoriteGroupDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteGroupDetailVC.swift; sourceTree = "<group>"; };
 		A3030CD31C8BE78100134CCA /* Favorite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
-		A3030CD61C8C1A7400134CCA /* BaseCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCache.swift; sourceTree = "<group>"; };
-		A3030CD81C8C1C9D00134CCA /* CacheBus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheBus.swift; sourceTree = "<group>"; };
-		A3030CDA1C8C1CB600134CCA /* CacheFavorite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheFavorite.swift; sourceTree = "<group>"; };
-		A3030CDC1C8C3D8000134CCA /* CacheCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheCategory.swift; sourceTree = "<group>"; };
 		A3030CDE1C8C3F3C00134CCA /* FavoriteCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteCategory.swift; sourceTree = "<group>"; };
 		A3030CE11C8C722E00134CCA /* AddFavoriteCategoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFavoriteCategoryVC.swift; sourceTree = "<group>"; };
 		A31C49E91C95B85600232775 /* AddFavoriteItemVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFavoriteItemVC.swift; sourceTree = "<group>"; };
@@ -67,6 +73,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0FA724B61CE4CBFB00557725 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0FA724B71CE4CC3C00557725 /* kDefine.h */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		A3030CCF1C8BE08400134CCA /* FavoriteGroupDetailVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,10 +102,15 @@
 		A3030CD51C8C1A5600134CCA /* Cache */ = {
 			isa = PBXGroup;
 			children = (
-				A3030CD61C8C1A7400134CCA /* BaseCache.swift */,
-				A3030CD81C8C1C9D00134CCA /* CacheBus.swift */,
-				A3030CDA1C8C1CB600134CCA /* CacheFavorite.swift */,
-				A3030CDC1C8C3D8000134CCA /* CacheCategory.swift */,
+				0FA724AA1CE4C96E00557725 /* CacheBus.h */,
+				0FA724AB1CE4C96E00557725 /* CacheBus.m */,
+				0FA724A91CE4C96D00557725 /* Favorites-Bridging-Header.h */,
+				0FA724AD1CE4C98800557725 /* CacheBase.h */,
+				0FA724AE1CE4C98800557725 /* CacheBase.m */,
+				0FA724B01CE4C9B500557725 /* CacheCategory.h */,
+				0FA724B11CE4C9B500557725 /* CacheCategory.m */,
+				0FA724B31CE4C9C800557725 /* CacheFavorite.h */,
+				0FA724B41CE4C9C800557725 /* CacheFavorite.m */,
 			);
 			path = Cache;
 			sourceTree = "<group>";
@@ -132,6 +151,7 @@
 		A3C9C7181C7873970091CAB5 /* Favorites */ = {
 			isa = PBXGroup;
 			children = (
+				0FA724B61CE4CBFB00557725 /* Utils */,
 				A3030CD51C8C1A5600134CCA /* Cache */,
 				A3030CD21C8BE6E600134CCA /* Model */,
 				A3C9C7321C794C610091CAB5 /* VC */,
@@ -202,13 +222,13 @@
 		A3C9C70E1C7873970091CAB5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "洪毅 郑";
 				TargetAttributes = {
 					A3C9C7151C7873970091CAB5 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = XTP2299ZCK;
+						DevelopmentTeam = 7T366LQLPX;
 					};
 				};
 			};
@@ -248,23 +268,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FA724B21CE4C9B500557725 /* CacheCategory.m in Sources */,
 				A3030CCE1C8BD7F500134CCA /* GroupCell.swift in Sources */,
+				0FA724AF1CE4C98800557725 /* CacheBase.m in Sources */,
 				A3C9C72F1C7949C50091CAB5 /* BaseTVC.swift in Sources */,
-				A3030CDB1C8C1CB600134CCA /* CacheFavorite.swift in Sources */,
 				A31C49EA1C95B85600232775 /* AddFavoriteItemVC.swift in Sources */,
 				A3030CE21C8C722E00134CCA /* AddFavoriteCategoryVC.swift in Sources */,
+				0FA724AC1CE4C96E00557725 /* CacheBus.m in Sources */,
 				A3C9C71C1C7873980091CAB5 /* ViewController.swift in Sources */,
 				A3C9C72D1C7949A70091CAB5 /* BaseVC.swift in Sources */,
-				A3030CD91C8C1C9D00134CCA /* CacheBus.swift in Sources */,
 				A3C9C7311C7949E50091CAB5 /* BaseNavigationController.swift in Sources */,
-				A3030CD71C8C1A7400134CCA /* BaseCache.swift in Sources */,
-				A3030CDD1C8C3D8000134CCA /* CacheCategory.swift in Sources */,
 				A3C9C71A1C7873980091CAB5 /* AppDelegate.swift in Sources */,
 				A3030CD41C8BE78100134CCA /* Favorite.swift in Sources */,
 				A3030CDF1C8C3F3C00134CCA /* FavoriteCategory.swift in Sources */,
 				A3C9C7351C794C950091CAB5 /* FavoriteHomeVC.swift in Sources */,
 				0FA2BE901C9CFC820095CA45 /* FavoriteDetailVC.swift in Sources */,
 				A3030CD11C8BE4EF00134CCA /* FavoriteGroupDetailVC.swift in Sources */,
+				0FA724B51CE4C9C800557725 /* CacheFavorite.m in Sources */,
 				0FA2BE8E1C9CF7EB0095CA45 /* FavoriteCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,7 +400,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: zheng yi (J7EN8LGLQW)";
+				DEFINES_MODULE = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Favorites/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -388,6 +411,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.eworld.favorite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "4bc7193a-16ca-4c7e-8081-b79fb1a09e2a";
+				SWIFT_OBJC_BRIDGING_HEADER = "Favorites/Cache/Favorites-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -395,7 +420,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEFINES_MODULE = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Favorites/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -403,6 +430,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.eworld.favorite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "4bc7193a-16ca-4c7e-8081-b79fb1a09e2a";
+				SWIFT_OBJC_BRIDGING_HEADER = "Favorites/Cache/Favorites-Bridging-Header.h";
 			};
 			name = Release;
 		};

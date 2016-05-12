@@ -35,13 +35,10 @@ class FavoriteHomeVC: BaseTVC {
     
     // MARK: - Private methods
     func loadGroupNames () {
-        //groupNames = CacheBus.sharedInstance.favoriteCategory.loadCachedFavoriteCategoriesForKey(userKey) as! [FavoriteCategory]
-        if groupNames.count == 0 {
-            let categoryOne = FavoriteCategory(tmpName: "xuexi");
-            let categoryTwo = FavoriteCategory(tmpName: "luxing");
-            let categoryThree = FavoriteCategory(tmpName: "yule");
-            groupNames += [categoryOne, categoryTwo, categoryThree];
-
+        if let tmpGroupNames =  CacheBus.ins().category.loadCachedCategoriesForKey(userKey) {
+            groupNames = tmpGroupNames as! [FavoriteCategory];
+        } else {
+            print("error")
         }
     }
     
@@ -115,7 +112,8 @@ class FavoriteHomeVC: BaseTVC {
         if let sourceViewController = sender.sourceViewController as? AddFavoriteCategoryVC, needAddedCategory = sourceViewController.currentCategory {
             groupNames.append(needAddedCategory)
             tableView.reloadData()
-            CacheBus.sharedInstance.favoriteCategory.cacheFavoriteCategories(groupNames, cacheKey: userKey)
+            CacheBus.ins().category.cacheCategories(needAddedCategory, forKey: userKey)
+            //CacheBus.sharedInstance.favoriteCategory.cacheFavoriteCategories(groupNames, cacheKey: userKey)
             
         }
     }

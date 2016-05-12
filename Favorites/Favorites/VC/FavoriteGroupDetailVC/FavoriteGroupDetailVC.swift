@@ -18,6 +18,7 @@ class FavoriteGroupDetailVC: BaseTVC {
 
         // Do any additional setup after loading the view.
         self.title = currentGropCategory?.categoryName
+        self.loadDatas()
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,7 +31,7 @@ class FavoriteGroupDetailVC: BaseTVC {
         if let sourceViewController = sender.sourceViewController as? AddFavoriteItemVC, needAddedCategory = sourceViewController.currentItem {
             groupDetails.append(needAddedCategory)
             tableView.reloadData()
-            
+            CacheBus.ins().favorite.cacheFavorite(needAddedCategory, forCategory: currentGropCategory?.categoryName)
         }
     }
     
@@ -51,6 +52,14 @@ class FavoriteGroupDetailVC: BaseTVC {
         return cell
     }
 
+    // MARK: - Private methods
+    
+    func loadDatas() {
+        if let tmpDetails = CacheBus.ins().favorite.loadCachedFavoritesForCategory(currentGropCategory?.categoryName) {
+            groupDetails = tmpDetails as! [Favorite]
+        }
+    }
+    
 
     
     // MARK: - Navigation
