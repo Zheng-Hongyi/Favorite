@@ -12,6 +12,8 @@
 
 - (void) cacheCategories:(id) gategory forKey:(NSString *) userId;
 
+- (void) cacheAllCategories:(id) all forKey:(NSString *) userId;
+
 - (id) loadCachedCategoriesForKey:(NSString *) userId;
 
 @end

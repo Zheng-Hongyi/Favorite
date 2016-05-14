@@ -8,9 +8,12 @@
 
 import UIKit
 
-class FavoriteHomeVC: BaseTVC {
+class FavoriteHomeVC: BaseTVC, HYNoResultsViewDelegate, UIAlertViewDelegate{
     
     var groupNames = [FavoriteCategory]()
+    var noResultView:HYNoResultsView?
+    var needDeleteIndex: Int?
+    
     
     let userKey = "addmin"
     
@@ -18,9 +21,9 @@ class FavoriteHomeVC: BaseTVC {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.title = "首页";
-        loadGroupNames();
+        self.title = "X-收藏";
         configView()
+        loadGroupNames();
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,17 +43,27 @@ class FavoriteHomeVC: BaseTVC {
         } else {
             print("error")
         }
+        refreshView()
+    }
+    
+    func refreshView() {
+        if 0 == groupNames.count {
+            tableView.addSubview(noResultView!)
+        } else {
+            noResultView?.removeFromSuperview()
+        }
+        tableView.reloadData();
     }
     
     func configView () {
+        noResultView = HYNoResultsView.init(title: "没有添加任何内容", message: "你还没有添加任何类别，例如学习、健身等等", accessoryView: nil, buttonTitle: "添加")
+        noResultView?.delegate = self
         tableView.tableFooterView = UIView.init();
     }
     
     @IBAction func addFavoriteCategory(sender: AnyObject) {
         print("hello world")
-        let alert:UIAlertView = UIAlertView(title: "Alert", message: "I'm an iOS7 alert", delegate: self, cancelButtonTitle: "OK")
-        alert.delegate = self
-        alert.show()
+        self.performSegueWithIdentifier("AddGroup", sender: 0)
     }
    
     // MARK: - Table view data source
@@ -73,48 +86,60 @@ class FavoriteHomeVC: BaseTVC {
     }
     
     
-    /*
+    
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
     // Return false if you do not want the specified item to be editable.
-    return true
+        return true
     }
-    */
     
-    /*
+    
+    
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-    if editingStyle == .Delete {
-    // Delete the row from the data source
-    tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-    } else if editingStyle == .Insert {
-    // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        if editingStyle == .Delete {
+            // Delete the row from the data source
+            //tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            let alert:UIAlertView = UIAlertView(title: "", message: "确定要删除吗", delegate: self, cancelButtonTitle: "取消" )
+            alert.addButtonWithTitle("删除")
+            alert.delegate = self
+            alert.show()
+            alert.tag = 100
+            needDeleteIndex = indexPath.row;
+        } else if editingStyle == .Insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }
     }
-    }
-    */
-    
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-    
-    }
-    */
-    
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-    // Return false if you do not want the item to be re-orderable.
-    return true
-    }
-    */
     
     @IBAction func unwindToHomeList(sender: UIStoryboardSegue) {
         if let sourceViewController = sender.sourceViewController as? AddFavoriteCategoryVC, needAddedCategory = sourceViewController.currentCategory {
             groupNames.append(needAddedCategory)
-            tableView.reloadData()
+            refreshView()
             CacheBus.ins().category.cacheCategories(needAddedCategory, forKey: userKey)
             //CacheBus.sharedInstance.favoriteCategory.cacheFavoriteCategories(groupNames, cacheKey: userKey)
             
+        }
+    }
+    
+    // MARK: - HYNoResultViewDelegate
+    
+    func didTapNoResultsView(noResultsView: HYNoResultsView!) {
+        addFavoriteCategory(0)
+    }
+    
+    // MARK: - UIAlertViewDelegate
+    
+    func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
+        if alertView.tag == 100 {
+            if 0 == buttonIndex {
+                refreshView()
+            }
+            if 1 == buttonIndex {
+                let tmp = groupNames[needDeleteIndex!]
+                LogicBus.sharedInstance.homeLogic.remove(tmp, index: needDeleteIndex!,userKey: userKey)
+                groupNames.removeAtIndex(needDeleteIndex!)
+                refreshView()
+            }
         }
     }
 

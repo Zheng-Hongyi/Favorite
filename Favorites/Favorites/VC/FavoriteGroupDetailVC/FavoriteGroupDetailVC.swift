@@ -8,16 +8,19 @@
 
 import UIKit
 
-class FavoriteGroupDetailVC: BaseTVC {
+class FavoriteGroupDetailVC: BaseTVC, HYNoResultsViewDelegate, UIAlertViewDelegate {
     
     var currentGropCategory : FavoriteCategory?
     var groupDetails = [Favorite]();
-
+    var noResultView:HYNoResultsView?
+    var needDeleteIndex: Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         self.title = currentGropCategory?.categoryName
+        configView()
         self.loadDatas()
     }
 
@@ -30,7 +33,7 @@ class FavoriteGroupDetailVC: BaseTVC {
     @IBAction func unwindToDetailList(sender: UIStoryboardSegue) {
         if let sourceViewController = sender.sourceViewController as? AddFavoriteItemVC, needAddedCategory = sourceViewController.currentItem {
             groupDetails.append(needAddedCategory)
-            tableView.reloadData()
+            refreshView()
             CacheBus.ins().favorite.cacheFavorite(needAddedCategory, forCategory: currentGropCategory?.categoryName)
         }
     }
@@ -51,6 +54,48 @@ class FavoriteGroupDetailVC: BaseTVC {
         cell.favoriteNameLabel.text = groupName.name;
         return cell
     }
+    
+    // Override to support conditional editing of the table view.
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        // Return false if you do not want the specified item to be editable.
+        return true
+    }
+    
+    
+    
+    // Override to support editing the table view.
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            // Delete the row from the data source
+            //tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            let alert:UIAlertView = UIAlertView(title: "", message: "确定要删除吗", delegate: self, cancelButtonTitle: "取消" )
+            alert.addButtonWithTitle("删除")
+            alert.delegate = self
+            alert.show()
+            alert.tag = 100
+            needDeleteIndex = indexPath.row;
+        } else if editingStyle == .Insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }
+    }
+    
+    // MARK: UIAlertViewDelegate
+    
+    func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
+        if alertView.tag == 100 {
+            if 0 == buttonIndex {
+                refreshView()
+            }
+            if 1 == buttonIndex {
+                let tmp = groupDetails[needDeleteIndex!]
+                LogicBus.sharedInstance.groupDetail.remove(tmp, index: needDeleteIndex!, categoryName: (currentGropCategory?.categoryName)!)
+                groupDetails.removeAtIndex(needDeleteIndex!)
+                refreshView()
+            }
+        }
+    }
+
+
 
     // MARK: - Private methods
     
@@ -58,8 +103,30 @@ class FavoriteGroupDetailVC: BaseTVC {
         if let tmpDetails = CacheBus.ins().favorite.loadCachedFavoritesForCategory(currentGropCategory?.categoryName) {
             groupDetails = tmpDetails as! [Favorite]
         }
+        refreshView()
     }
     
+    func configView () {
+        noResultView = HYNoResultsView.init(title: "没有添加任何内容", message: "您可以在这里添加您喜欢的文章标题以及对应的链接", accessoryView: nil, buttonTitle: "添加")
+        noResultView?.delegate = self
+        tableView.tableFooterView = UIView.init();
+    }
+    
+    func refreshView () {
+        if 0 == groupDetails.count {
+            tableView.addSubview(noResultView!)
+        } else {
+            noResultView?.removeFromSuperview()
+        }
+        tableView.reloadData()
+    }
+    
+    // MARK: - HYNoResultViewDelegate
+    
+    func didTapNoResultsView(noResultsView: HYNoResultsView!) {
+        //addFavoriteCategory(0)
+        self.performSegueWithIdentifier("AddFavoriteItem", sender: 0)
+    }
 
     
     // MARK: - Navigation

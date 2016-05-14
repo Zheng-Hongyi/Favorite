@@ -22,7 +22,14 @@ static NSString *const kCacheFavorite = @"k_app_cache_favorites";
     }
     [willCachedData addObject:favorite];
     [self cacheObjectData:willCachedData forKey:[NSString stringWithFormat:@"%@%@",kCacheFavorite,category]];
+}
 
+- (void) cacheAllFavorites:(id)allFavorites forCategory:(NSString *)category {
+    [self cacheObjectData:allFavorites forKey:[NSString stringWithFormat:@"%@%@",kCacheFavorite,category]];
+}
+
+- (void) clearCachedFavoriteForCategory:(NSString *)category {
+    [self clearCachedDataForKey:[NSString stringWithFormat:@"%@%@",kCacheFavorite,category]];
 }
 
 - (id) loadCachedFavoritesForCategory:(NSString *)category {

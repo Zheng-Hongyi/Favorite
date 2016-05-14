@@ -12,7 +12,7 @@ static NSString *const kCacheCategory = @"k_app_cache_category";
 
 @implementation CacheCategory
 
-- (void) cacheCategories:(CacheCategory *) gategory forKey:(NSString *) userId {
+- (void) cacheCategories:(id) gategory forKey:(NSString *) userId {
     NSArray *cachedData = [self loadCachedCategoriesForKey:userId];
     NSMutableArray *willCachedData;
     if (nil == cachedData || cachedData.count == 0) {
@@ -22,6 +22,10 @@ static NSString *const kCacheCategory = @"k_app_cache_category";
     }
     [willCachedData addObject:gategory];
     [self cacheObjectData:willCachedData forKey:[NSString stringWithFormat:@"%@%@",kCacheCategory,userId]];
+}
+
+- (void) cacheAllCategories:(id)all forKey:(NSString *)userId {
+    [self cacheObjectData:all forKey:[NSString stringWithFormat:@"%@%@",kCacheCategory,userId]];
 }
 
 - (id) loadCachedCategoriesForKey:(NSString *) userId {

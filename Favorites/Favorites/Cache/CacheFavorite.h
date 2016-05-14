@@ -12,6 +12,10 @@
 
 - (void) cacheFavorite:(id) favorite forCategory:(NSString *) category;
 
+- (void) cacheAllFavorites:(id) allFavorites forCategory:(NSString *) category;
+
+- (void) clearCachedFavoriteForCategory:(NSString *) category;
+
 - (id) loadCachedFavoritesForCategory:(NSString *) category;
 
 @end
