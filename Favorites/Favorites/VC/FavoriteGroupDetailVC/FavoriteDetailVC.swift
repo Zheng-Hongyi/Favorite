@@ -18,7 +18,8 @@ class FavoriteDetailVC: BaseVC {
 
         // Do any additional setup after loading the view.
         self.title = currentFavorite!.name;
-        let url = NSURLRequest.init(URL: NSURL.init(string: currentFavorite!.source)!)
+        //let url = NSURLRequest.init(URL: NSURL.init(string: currentFavorite!.source)!)
+        let url = NSURLRequest.init(URL: NSURL.init(string: currentFavorite!.source)!, cachePolicy: NSURLRequestCachePolicy.ReturnCacheDataElseLoad, timeoutInterval: 60*60*24*7)
         mainWeb.loadRequest(url)
     }
 

@@ -40,7 +40,16 @@ class AddFavoriteItemVC: BaseVC, UITextFieldDelegate {
     func checkValidMealName() {
         let text = itemLInkTextFiled.text ?? ""
         let text2 = itemNameTextFiled.text ?? ""
-        saveButton.enabled = !text.isEmpty && !text2.isEmpty
+        if text.hasPrefix("http://") || text.hasPrefix("https://") {
+            saveButton.enabled = !text.isEmpty && !text2.isEmpty
+        } else {
+            saveButton.enabled = false
+            if !text.isEmpty {
+                SVProgressHUD.showErrorWithStatus("链接格式不对")
+                itemLInkTextFiled.becomeFirstResponder()
+            }
+        }
+    
     }
     
     // MARK: - Navigation
