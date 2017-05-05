@@ -30,33 +30,33 @@ class FavoriteGroupDetailVC: BaseTVC, HYNoResultsViewDelegate, UIAlertViewDelega
     }
     
     
-    @IBAction func unwindToDetailList(sender: UIStoryboardSegue) {
-        if let sourceViewController = sender.sourceViewController as? AddFavoriteItemVC, needAddedCategory = sourceViewController.currentItem {
+    @IBAction func unwindToDetailList(_ sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.source as? AddFavoriteItemVC, let needAddedCategory = sourceViewController.currentItem {
             groupDetails.append(needAddedCategory)
             refreshView()
             CacheBus.ins().favorite.cacheFavorite(needAddedCategory, forCategory: currentGropCategory?.categoryName)
         }
     }
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return groupDetails.count
     }
     
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellIdentifier = "FavoriteCell";
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! FavoriteCell;
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! FavoriteCell;
         let groupName = groupDetails[indexPath.row];
         cell.favoriteNameLabel.text = groupName.name;
         return cell
     }
     
     // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
@@ -64,24 +64,24 @@ class FavoriteGroupDetailVC: BaseTVC, HYNoResultsViewDelegate, UIAlertViewDelega
     
     
     // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
             // Delete the row from the data source
             //tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
             let alert:UIAlertView = UIAlertView(title: "", message: "确定要删除吗", delegate: self, cancelButtonTitle: "取消" )
-            alert.addButtonWithTitle("删除")
+            alert.addButton(withTitle: "删除")
             alert.delegate = self
             alert.show()
             alert.tag = 100
             needDeleteIndex = indexPath.row;
-        } else if editingStyle == .Insert {
+        } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }
     }
     
     // MARK: UIAlertViewDelegate
     
-    func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
+    func alertView(_ alertView: UIAlertView, clickedButtonAt buttonIndex: Int) {
         if alertView.tag == 100 {
             if 0 == buttonIndex {
                 refreshView()
@@ -89,7 +89,7 @@ class FavoriteGroupDetailVC: BaseTVC, HYNoResultsViewDelegate, UIAlertViewDelega
             if 1 == buttonIndex {
                 let tmp = groupDetails[needDeleteIndex!]
                 LogicBus.sharedInstance.groupDetail.remove(tmp, index: needDeleteIndex!, categoryName: (currentGropCategory?.categoryName)!)
-                groupDetails.removeAtIndex(needDeleteIndex!)
+                groupDetails.remove(at: needDeleteIndex!)
                 refreshView()
             }
         }
@@ -100,7 +100,7 @@ class FavoriteGroupDetailVC: BaseTVC, HYNoResultsViewDelegate, UIAlertViewDelega
     // MARK: - Private methods
     
     func loadDatas() {
-        if let tmpDetails = CacheBus.ins().favorite.loadCachedFavoritesForCategory(currentGropCategory?.categoryName) {
+        if let tmpDetails = CacheBus.ins().favorite.loadCachedFavorites(forCategory: currentGropCategory?.categoryName) {
             groupDetails = tmpDetails as! [Favorite]
         }
         refreshView()
@@ -123,22 +123,22 @@ class FavoriteGroupDetailVC: BaseTVC, HYNoResultsViewDelegate, UIAlertViewDelega
     
     // MARK: - HYNoResultViewDelegate
     
-    func didTapNoResultsView(noResultsView: HYNoResultsView!) {
+    func didTap(_ noResultsView: HYNoResultsView!) {
         //addFavoriteCategory(0)
-        self.performSegueWithIdentifier("AddFavoriteItem", sender: 0)
+        self.performSegue(withIdentifier: "AddFavoriteItem", sender: 0)
     }
 
     
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if segue.identifier == "enterFavoriteDetail" {
-            let fvoriteDetailVC = segue.destinationViewController as! FavoriteDetailVC;
+            let fvoriteDetailVC = segue.destination as! FavoriteDetailVC;
             if let selectedCell = sender as? FavoriteCell {
-                let indexPath = tableView.indexPathForCell(selectedCell)!
+                let indexPath = tableView.indexPath(for: selectedCell)!
                 let selectedFavorite = groupDetails[indexPath.row]
                 fvoriteDetailVC.currentFavorite = selectedFavorite
             }

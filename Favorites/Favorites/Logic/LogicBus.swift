@@ -8,7 +8,16 @@
 
 import Foundation
 
+struct Static {
+    static var onceToken: Int = 0
+    static var instance: LogicBus? = nil
+}
+
 class LogicBus: NSObject {
+    
+    private static var __once: () = { () -> Void in
+            Static.instance = LogicBus();
+        }()
     
     var homeLogic: HomeLogic
     var groupDetail: GroupDetailLogic
@@ -20,13 +29,7 @@ class LogicBus: NSObject {
     }
     
     class var sharedInstance: LogicBus {
-        struct Static {
-            static var onceToken: dispatch_once_t = 0
-            static var instance: LogicBus? = nil
-        }
-        dispatch_once(&Static.onceToken) { () -> Void in
-            Static.instance = LogicBus();
-        }
+        _ = LogicBus.__once
         return Static.instance!
 
     }

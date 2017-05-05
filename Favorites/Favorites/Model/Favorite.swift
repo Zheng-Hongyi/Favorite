@@ -25,14 +25,14 @@ class Favorite: NSObject, NSCoding {
     }
     
     // MARK: NSCoding
-    func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeObject(name, forKey: PropertyKey.nameKey)
-        aCoder.encodeObject(source, forKey: PropertyKey.sourceKey)
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(name, forKey: PropertyKey.nameKey)
+        aCoder.encode(source, forKey: PropertyKey.sourceKey)
     }
     
     required convenience init(coder aDecoder: NSCoder) {
-        let name_ = aDecoder.decodeObjectForKey(PropertyKey.nameKey) as! String
-        let source_ = aDecoder.decodeObjectForKey(PropertyKey.sourceKey) as! String
+        let name_ = aDecoder.decodeObject(forKey: PropertyKey.nameKey) as! String
+        let source_ = aDecoder.decodeObject(forKey: PropertyKey.sourceKey) as! String
         self.init(name:name_,source:source_);
     }
 

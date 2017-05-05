@@ -17,7 +17,7 @@
 		0FA724AF1CE4C98800557725 /* CacheBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA724AE1CE4C98800557725 /* CacheBase.m */; };
 		0FA724B21CE4C9B500557725 /* CacheCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA724B11CE4C9B500557725 /* CacheCategory.m */; };
 		0FA724B51CE4C9C800557725 /* CacheFavorite.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA724B41CE4C9C800557725 /* CacheFavorite.m */; };
-		19A9E2276763557AE84B6D80 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E6978B1622944F7DF709F6A2 /* libPods.a */; };
+		7CDDBE339F5023F92C7F13B5 /* libPods-Favorites.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65A11DB4C994A54084ACF30F /* libPods-Favorites.a */; };
 		A3030CCE1C8BD7F500134CCA /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3030CCD1C8BD7F500134CCA /* GroupCell.swift */; };
 		A3030CD11C8BE4EF00134CCA /* FavoriteGroupDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3030CD01C8BE4EF00134CCA /* FavoriteGroupDetailVC.swift */; };
 		A3030CD41C8BE78100134CCA /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3030CD31C8BE78100134CCA /* Favorite.swift */; };
@@ -52,6 +52,9 @@
 		0FA724B31CE4C9C800557725 /* CacheFavorite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheFavorite.h; sourceTree = "<group>"; };
 		0FA724B41CE4C9C800557725 /* CacheFavorite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheFavorite.m; sourceTree = "<group>"; };
 		0FA724B71CE4CC3C00557725 /* kDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kDefine.h; sourceTree = "<group>"; };
+		65A11DB4C994A54084ACF30F /* libPods-Favorites.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Favorites.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		75A9A091F52A6AB0358CD928 /* Pods-Favorites.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Favorites.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Favorites/Pods-Favorites.debug.xcconfig"; sourceTree = "<group>"; };
+		7F49896C53F49368EA835061 /* Pods-Favorites.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Favorites.release.xcconfig"; path = "Pods/Target Support Files/Pods-Favorites/Pods-Favorites.release.xcconfig"; sourceTree = "<group>"; };
 		A3030CCD1C8BD7F500134CCA /* GroupCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
 		A3030CD01C8BE4EF00134CCA /* FavoriteGroupDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteGroupDetailVC.swift; sourceTree = "<group>"; };
 		A3030CD31C8BE78100134CCA /* Favorite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
@@ -68,9 +71,6 @@
 		A3C9C72E1C7949C50091CAB5 /* BaseTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTVC.swift; sourceTree = "<group>"; };
 		A3C9C7301C7949E50091CAB5 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		A3C9C7341C794C950091CAB5 /* FavoriteHomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteHomeVC.swift; sourceTree = "<group>"; };
-		BB22D0590D72CBDD213AAFED /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		C636DC26E70874127138510E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		E6978B1622944F7DF709F6A2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,22 +78,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19A9E2276763557AE84B6D80 /* libPods.a in Frameworks */,
+				7CDDBE339F5023F92C7F13B5 /* libPods-Favorites.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0E2800DE7C3C6456A8DA32F2 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				C636DC26E70874127138510E /* Pods.debug.xcconfig */,
-				BB22D0590D72CBDD213AAFED /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		0F0DF1F01CE77C50009AD31E /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,10 +112,10 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		4A21BEBD589E963AA2354180 /* Frameworks */ = {
+		A20FA4F47F08C6685F2704EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E6978B1622944F7DF709F6A2 /* libPods.a */,
+				65A11DB4C994A54084ACF30F /* libPods-Favorites.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -185,8 +176,8 @@
 			children = (
 				A3C9C7181C7873970091CAB5 /* Favorites */,
 				A3C9C7171C7873970091CAB5 /* Products */,
-				0E2800DE7C3C6456A8DA32F2 /* Pods */,
-				4A21BEBD589E963AA2354180 /* Frameworks */,
+				ADF2735E3122895222A5A50E /* Pods */,
+				A20FA4F47F08C6685F2704EB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -247,6 +238,15 @@
 			path = FavoriteHomeVC;
 			sourceTree = "<group>";
 		};
+		ADF2735E3122895222A5A50E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				75A9A091F52A6AB0358CD928 /* Pods-Favorites.debug.xcconfig */,
+				7F49896C53F49368EA835061 /* Pods-Favorites.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -254,12 +254,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A3C9C7281C7873980091CAB5 /* Build configuration list for PBXNativeTarget "Favorites" */;
 			buildPhases = (
-				5F1D0F24719235DD5ECA3BB4 /* Check Pods Manifest.lock */,
+				8AA29A6ACEE2BB78C32CA7C9 /* [CP] Check Pods Manifest.lock */,
 				A3C9C7121C7873970091CAB5 /* Sources */,
 				A3C9C7131C7873970091CAB5 /* Frameworks */,
 				A3C9C7141C7873970091CAB5 /* Resources */,
-				90DFA2665569C516325A285A /* Embed Pods Frameworks */,
-				FDF250EE5AD2DF427019108C /* Copy Pods Resources */,
+				FC8707B2ABE1616A7E20E3D0 /* [CP] Embed Pods Frameworks */,
+				9D4DA98522922AE31895FDE7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -277,7 +277,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "洪毅 郑";
 				TargetAttributes = {
 					A3C9C7151C7873970091CAB5 = {
@@ -317,49 +317,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5F1D0F24719235DD5ECA3BB4 /* Check Pods Manifest.lock */ = {
+		8AA29A6ACEE2BB78C32CA7C9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		90DFA2665569C516325A285A /* Embed Pods Frameworks */ = {
+		9D4DA98522922AE31895FDE7 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Favorites/Pods-Favorites-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FDF250EE5AD2DF427019108C /* Copy Pods Resources */ = {
+		FC8707B2ABE1616A7E20E3D0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Favorites/Pods-Favorites-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -411,6 +411,7 @@
 		A3C9C7261C7873980091CAB5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -421,15 +422,16 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -457,6 +459,7 @@
 		A3C9C7271C7873980091CAB5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -467,15 +470,16 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -489,23 +493,24 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		A3C9C7291C7873980091CAB5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C636DC26E70874127138510E /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 75A9A091F52A6AB0358CD928 /* Pods-Favorites.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: ZHENG HONGYI (7T366LQLPX)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ZHENG HONGYI (7T366LQLPX)";
 				DEFINES_MODULE = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Favorites/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -516,21 +521,22 @@
 				PROVISIONING_PROFILE = "0bc61c04-e309-472b-8623-96fc06fc6bc2";
 				SWIFT_OBJC_BRIDGING_HEADER = "Favorites/Cache/Favorites-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		A3C9C72A1C7873980091CAB5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BB22D0590D72CBDD213AAFED /* Pods.release.xcconfig */;
+			baseConfigurationReference = 7F49896C53F49368EA835061 /* Pods-Favorites.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: ZHENG HONGYI (7T366LQLPX)";
 				DEFINES_MODULE = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Favorites/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -540,6 +546,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "0bc61c04-e309-472b-8623-96fc06fc6bc2";
 				SWIFT_OBJC_BRIDGING_HEADER = "Favorites/Cache/Favorites-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

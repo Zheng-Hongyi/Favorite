@@ -31,38 +31,38 @@ class AddFavoriteCategoryVC: BaseVC, UITextFieldDelegate {
     
     // MARK: Private methods
 
-    @IBAction func cancelAdd(sender: AnyObject) {
-        dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func cancelAdd(_ sender: AnyObject) {
+        dismiss(animated: true, completion: nil)
     }
     
     func checkValidMealName() {
         let text = groupNameTextFiled.text ?? ""
-        saveButton.enabled = !text.isEmpty
+        saveButton.isEnabled = !text.isEmpty
     }
     
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        if saveButton === sender {
+        if saveButton == sender as! UIBarButtonItem {
             let groupName = groupNameTextFiled.text ?? ""
             currentCategory = FavoriteCategory(tmpName: groupName)
         }
     }
     
     // MARk: UITextFiledDelegate
-    func textFieldDidBeginEditing(textField: UITextField) {
-        saveButton.enabled = false
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        saveButton.isEnabled = false
     }
     
-    func textFieldDidEndEditing(textField: UITextField) {
+    func textFieldDidEndEditing(_ textField: UITextField) {
         checkValidMealName()
         navigationItem.title = textField.text
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         groupNameTextFiled.resignFirstResponder()
         return true
     }

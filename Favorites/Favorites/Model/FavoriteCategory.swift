@@ -22,12 +22,12 @@ class FavoriteCategory: NSObject, NSCoding {
     }
     
     // MARK: NSCoding
-    func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeObject(categoryName, forKey: FCPropertyKey.categoryName)
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(categoryName, forKey: FCPropertyKey.categoryName)
     }
     
     required convenience init(coder aDecoder: NSCoder) {
-        let name_ = aDecoder.decodeObjectForKey(FCPropertyKey.categoryName) as! String
+        let name_ = aDecoder.decodeObject(forKey: FCPropertyKey.categoryName) as! String
         self.init(tmpName: name_);
     }
 

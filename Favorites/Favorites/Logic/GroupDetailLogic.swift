@@ -9,11 +9,11 @@
 import Foundation
 
 class GroupDetailLogic: NSObject {
-    func remove(favorite:Favorite,index:Int, categoryName:String) -> Bool {
+    func remove(_ favorite:Favorite,index:Int, categoryName:String) -> Bool {
         //
-        if let tmpAllFavorites =  CacheBus.ins().favorite.loadCachedFavoritesForCategory(categoryName) {
+        if let tmpAllFavorites =  CacheBus.ins().favorite.loadCachedFavorites(forCategory: categoryName) {
             var allFavorites = tmpAllFavorites as! [Favorite];
-            allFavorites.removeAtIndex(index)
+            allFavorites.remove(at: index)
             CacheBus.ins().favorite.cacheAllFavorites(allFavorites, forCategory: categoryName)
         }
         return false;

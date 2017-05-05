@@ -10,12 +10,12 @@ import Foundation
 
 class HomeLogic: NSObject {
     
-    func remove(cateGory:FavoriteCategory,index:Int, userKey:String) -> Bool {
+    func remove(_ cateGory:FavoriteCategory,index:Int, userKey:String) -> Bool {
         // 需要操作两个缓存 1、移除category 2、移除category下的具体内容
-        CacheBus.ins().favorite.clearCachedFavoriteForCategory(cateGory.categoryName)
-        if let tmpGroupNames =  CacheBus.ins().category.loadCachedCategoriesForKey(userKey) {
+        CacheBus.ins().favorite.clearCachedFavorite(forCategory: cateGory.categoryName)
+        if let tmpGroupNames =  CacheBus.ins().category.loadCachedCategories(forKey: userKey) {
             var groupNames = tmpGroupNames as! [FavoriteCategory];
-            groupNames.removeAtIndex(index)
+            groupNames.remove(at: index)
             CacheBus.ins().category.cacheAllCategories(groupNames, forKey: userKey)
         }
         return false;
