@@ -17,13 +17,13 @@
 		0FA724AF1CE4C98800557725 /* CacheBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA724AE1CE4C98800557725 /* CacheBase.m */; };
 		0FA724B21CE4C9B500557725 /* CacheCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA724B11CE4C9B500557725 /* CacheCategory.m */; };
 		0FA724B51CE4C9C800557725 /* CacheFavorite.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA724B41CE4C9C800557725 /* CacheFavorite.m */; };
-		7CDDBE339F5023F92C7F13B5 /* libPods-Favorites.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65A11DB4C994A54084ACF30F /* libPods-Favorites.a */; };
 		A3030CCE1C8BD7F500134CCA /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3030CCD1C8BD7F500134CCA /* GroupCell.swift */; };
 		A3030CD11C8BE4EF00134CCA /* FavoriteGroupDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3030CD01C8BE4EF00134CCA /* FavoriteGroupDetailVC.swift */; };
 		A3030CD41C8BE78100134CCA /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3030CD31C8BE78100134CCA /* Favorite.swift */; };
 		A3030CDF1C8C3F3C00134CCA /* FavoriteCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3030CDE1C8C3F3C00134CCA /* FavoriteCategory.swift */; };
 		A3030CE21C8C722E00134CCA /* AddFavoriteCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3030CE11C8C722E00134CCA /* AddFavoriteCategoryVC.swift */; };
 		A31C49EA1C95B85600232775 /* AddFavoriteItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31C49E91C95B85600232775 /* AddFavoriteItemVC.swift */; };
+		A3A49C871ECF009B00C97CED /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A49C861ECF009B00C97CED /* SVProgressHUD.framework */; };
 		A3C9C71A1C7873980091CAB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C9C7191C7873980091CAB5 /* AppDelegate.swift */; };
 		A3C9C71C1C7873980091CAB5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C9C71B1C7873980091CAB5 /* ViewController.swift */; };
 		A3C9C71F1C7873980091CAB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3C9C71D1C7873980091CAB5 /* Main.storyboard */; };
@@ -32,6 +32,7 @@
 		A3C9C72F1C7949C50091CAB5 /* BaseTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C9C72E1C7949C50091CAB5 /* BaseTVC.swift */; };
 		A3C9C7311C7949E50091CAB5 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C9C7301C7949E50091CAB5 /* BaseNavigationController.swift */; };
 		A3C9C7351C794C950091CAB5 /* FavoriteHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C9C7341C794C950091CAB5 /* FavoriteHomeVC.swift */; };
+		CC7EE88F8CDD1BE0AEA7340E /* Pods_Favorites.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B97A79BCA5A5F008DCF2664 /* Pods_Favorites.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +43,7 @@
 		0F7BB3811CE736E400D6C73C /* GroupDetailLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupDetailLogic.swift; sourceTree = "<group>"; };
 		0FA2BE8D1C9CF7EB0095CA45 /* FavoriteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
 		0FA2BE8F1C9CFC820095CA45 /* FavoriteDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavoriteDetailVC.swift; path = Favorites/VC/FavoriteGroupDetailVC/FavoriteDetailVC.swift; sourceTree = SOURCE_ROOT; };
-		0FA724A91CE4C96D00557725 /* Favorites-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Favorites-Bridging-Header.h"; sourceTree = "<group>"; };
+		0FA724A91CE4C96D00557725 /* Favorites-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Favorites-Bridging-Header.h"; path = "Cache/Favorites-Bridging-Header.h"; sourceTree = "<group>"; };
 		0FA724AA1CE4C96E00557725 /* CacheBus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheBus.h; sourceTree = "<group>"; };
 		0FA724AB1CE4C96E00557725 /* CacheBus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheBus.m; sourceTree = "<group>"; };
 		0FA724AD1CE4C98800557725 /* CacheBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheBase.h; sourceTree = "<group>"; };
@@ -52,7 +53,7 @@
 		0FA724B31CE4C9C800557725 /* CacheFavorite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheFavorite.h; sourceTree = "<group>"; };
 		0FA724B41CE4C9C800557725 /* CacheFavorite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheFavorite.m; sourceTree = "<group>"; };
 		0FA724B71CE4CC3C00557725 /* kDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kDefine.h; sourceTree = "<group>"; };
-		65A11DB4C994A54084ACF30F /* libPods-Favorites.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Favorites.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B97A79BCA5A5F008DCF2664 /* Pods_Favorites.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Favorites.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75A9A091F52A6AB0358CD928 /* Pods-Favorites.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Favorites.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Favorites/Pods-Favorites.debug.xcconfig"; sourceTree = "<group>"; };
 		7F49896C53F49368EA835061 /* Pods-Favorites.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Favorites.release.xcconfig"; path = "Pods/Target Support Files/Pods-Favorites/Pods-Favorites.release.xcconfig"; sourceTree = "<group>"; };
 		A3030CCD1C8BD7F500134CCA /* GroupCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
@@ -61,6 +62,7 @@
 		A3030CDE1C8C3F3C00134CCA /* FavoriteCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteCategory.swift; sourceTree = "<group>"; };
 		A3030CE11C8C722E00134CCA /* AddFavoriteCategoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFavoriteCategoryVC.swift; sourceTree = "<group>"; };
 		A31C49E91C95B85600232775 /* AddFavoriteItemVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFavoriteItemVC.swift; sourceTree = "<group>"; };
+		A3A49C861ECF009B00C97CED /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = Carthage/Build/iOS/SVProgressHUD.framework; sourceTree = "<group>"; };
 		A3C9C7161C7873970091CAB5 /* Favorites.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Favorites.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3C9C7191C7873980091CAB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3C9C71B1C7873980091CAB5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,7 +80,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CDDBE339F5023F92C7F13B5 /* libPods-Favorites.a in Frameworks */,
+				A3A49C871ECF009B00C97CED /* SVProgressHUD.framework in Frameworks */,
+				CC7EE88F8CDD1BE0AEA7340E /* Pods_Favorites.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,7 +118,8 @@
 		A20FA4F47F08C6685F2704EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				65A11DB4C994A54084ACF30F /* libPods-Favorites.a */,
+				A3A49C861ECF009B00C97CED /* SVProgressHUD.framework */,
+				2B97A79BCA5A5F008DCF2664 /* Pods_Favorites.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -143,7 +147,6 @@
 			children = (
 				0FA724AA1CE4C96E00557725 /* CacheBus.h */,
 				0FA724AB1CE4C96E00557725 /* CacheBus.m */,
-				0FA724A91CE4C96D00557725 /* Favorites-Bridging-Header.h */,
 				0FA724AD1CE4C98800557725 /* CacheBase.h */,
 				0FA724AE1CE4C98800557725 /* CacheBase.m */,
 				0FA724B01CE4C9B500557725 /* CacheCategory.h */,
@@ -201,6 +204,7 @@
 				A3C9C72B1C79498D0091CAB5 /* Base */,
 				A3C9C7191C7873980091CAB5 /* AppDelegate.swift */,
 				A3C9C71B1C7873980091CAB5 /* ViewController.swift */,
+				0FA724A91CE4C96D00557725 /* Favorites-Bridging-Header.h */,
 				A3C9C71D1C7873980091CAB5 /* Main.storyboard */,
 				A3C9C7201C7873980091CAB5 /* Assets.xcassets */,
 				A3C9C7251C7873980091CAB5 /* Info.plist */,
@@ -260,6 +264,7 @@
 				A3C9C7141C7873970091CAB5 /* Resources */,
 				FC8707B2ABE1616A7E20E3D0 /* [CP] Embed Pods Frameworks */,
 				9D4DA98522922AE31895FDE7 /* [CP] Copy Pods Resources */,
+				A3A49C851ECEFF4600C97CED /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -283,6 +288,7 @@
 					A3C9C7151C7873970091CAB5 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = 7T366LQLPX;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -346,6 +352,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Favorites/Pods-Favorites-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		A3A49C851ECEFF4600C97CED /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SVProgressHUD.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
 		FC8707B2ABE1616A7E20E3D0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -507,8 +527,13 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: ZHENG HONGYI (7T366LQLPX)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ZHENG HONGYI (7T366LQLPX)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7T366LQLPX;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Favorites/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -518,7 +543,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.eworld.favorite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0bc61c04-e309-472b-8623-96fc06fc6bc2";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Favorites/Cache/Favorites-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -534,7 +560,13 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: ZHENG HONGYI (7T366LQLPX)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7T366LQLPX;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Favorites/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -544,7 +576,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.eworld.favorite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0bc61c04-e309-472b-8623-96fc06fc6bc2";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Favorites/Cache/Favorites-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};

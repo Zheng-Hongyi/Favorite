@@ -1,8 +1,9 @@
 platform :ios, 8.0
+use_frameworks!
 def main_dependency
-pod 'UMengAnalytics'
-pod 'Bugly'
-pod 'SVProgressHUD', '~> 2.0.3'
+pod 'UMengAnalytics-NO-IDFA', '~> 4.2.5'
+pod 'Bugly', '~> 2.4.7'
+pod 'LeanCloud', '~> 10.0.0'
 end
 
 target "Favorites" do

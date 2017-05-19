@@ -5,4 +5,4 @@
 #import "CacheBus.h"
 #import "HYNoResultsView.h"
 #import <Bugly/Bugly.h>
-#import <SVProgressHUD.h>
+#import <SVProgressHUD/SVProgressHUD.h>

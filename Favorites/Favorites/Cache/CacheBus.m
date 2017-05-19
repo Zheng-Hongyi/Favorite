@@ -25,6 +25,7 @@
         _category = [CacheCategory new];
         _favorite = [CacheFavorite new];
     }
+    
     return self;
 }
 
