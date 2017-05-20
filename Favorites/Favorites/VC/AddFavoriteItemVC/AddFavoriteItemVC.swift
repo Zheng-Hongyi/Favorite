@@ -24,6 +24,12 @@ class AddFavoriteItemVC: BaseVC, UITextFieldDelegate {
         itemLInkTextFiled.delegate = self;
         checkValidMealName();
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        itemLInkTextFiled.resignFirstResponder();
+        itemNameTextFiled.resignFirstResponder();
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -46,7 +52,6 @@ class AddFavoriteItemVC: BaseVC, UITextFieldDelegate {
             saveButton.isEnabled = false
             if !text.isEmpty {
                 SVProgressHUD.showError(withStatus: "链接格式不对")
-                itemLInkTextFiled.becomeFirstResponder()
             }
         }
     

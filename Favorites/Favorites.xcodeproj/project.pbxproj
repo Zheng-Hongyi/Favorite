@@ -11,6 +11,10 @@
 		0F7BB37E1CE7231100D6C73C /* LogicBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7BB37D1CE7231100D6C73C /* LogicBus.swift */; };
 		0F7BB3801CE7235500D6C73C /* HomeLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7BB37F1CE7235500D6C73C /* HomeLogic.swift */; };
 		0F7BB3821CE736E400D6C73C /* GroupDetailLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7BB3811CE736E400D6C73C /* GroupDetailLogic.swift */; };
+		0F883FB01ECFCB7A00947462 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F883FAD1ECFCB7A00947462 /* ReactiveCocoa.framework */; };
+		0F883FB11ECFCB7A00947462 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F883FAE1ECFCB7A00947462 /* ReactiveSwift.framework */; };
+		0F883FB21ECFCB7A00947462 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F883FAF1ECFCB7A00947462 /* Result.framework */; };
+		0F883FB51ED0145000947462 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0F883FB71ED0145000947462 /* Localizable.strings */; };
 		0FA2BE8E1C9CF7EB0095CA45 /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA2BE8D1C9CF7EB0095CA45 /* FavoriteCell.swift */; };
 		0FA2BE901C9CFC820095CA45 /* FavoriteDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA2BE8F1C9CFC820095CA45 /* FavoriteDetailVC.swift */; };
 		0FA724AC1CE4C96E00557725 /* CacheBus.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA724AB1CE4C96E00557725 /* CacheBus.m */; };
@@ -41,6 +45,10 @@
 		0F7BB37D1CE7231100D6C73C /* LogicBus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogicBus.swift; sourceTree = "<group>"; };
 		0F7BB37F1CE7235500D6C73C /* HomeLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeLogic.swift; sourceTree = "<group>"; };
 		0F7BB3811CE736E400D6C73C /* GroupDetailLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupDetailLogic.swift; sourceTree = "<group>"; };
+		0F883FAD1ECFCB7A00947462 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
+		0F883FAE1ECFCB7A00947462 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
+		0F883FAF1ECFCB7A00947462 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		0F883FB61ED0145000947462 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0FA2BE8D1C9CF7EB0095CA45 /* FavoriteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
 		0FA2BE8F1C9CFC820095CA45 /* FavoriteDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavoriteDetailVC.swift; path = Favorites/VC/FavoriteGroupDetailVC/FavoriteDetailVC.swift; sourceTree = SOURCE_ROOT; };
 		0FA724A91CE4C96D00557725 /* Favorites-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Favorites-Bridging-Header.h"; path = "Cache/Favorites-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -80,6 +88,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F883FB01ECFCB7A00947462 /* ReactiveCocoa.framework in Frameworks */,
+				0F883FB11ECFCB7A00947462 /* ReactiveSwift.framework in Frameworks */,
+				0F883FB21ECFCB7A00947462 /* Result.framework in Frameworks */,
 				A3A49C871ECF009B00C97CED /* SVProgressHUD.framework in Frameworks */,
 				CC7EE88F8CDD1BE0AEA7340E /* Pods_Favorites.framework in Frameworks */,
 			);
@@ -118,6 +129,9 @@
 		A20FA4F47F08C6685F2704EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0F883FAD1ECFCB7A00947462 /* ReactiveCocoa.framework */,
+				0F883FAE1ECFCB7A00947462 /* ReactiveSwift.framework */,
+				0F883FAF1ECFCB7A00947462 /* Result.framework */,
 				A3A49C861ECF009B00C97CED /* SVProgressHUD.framework */,
 				2B97A79BCA5A5F008DCF2664 /* Pods_Favorites.framework */,
 			);
@@ -208,6 +222,7 @@
 				A3C9C71D1C7873980091CAB5 /* Main.storyboard */,
 				A3C9C7201C7873980091CAB5 /* Assets.xcassets */,
 				A3C9C7251C7873980091CAB5 /* Info.plist */,
+				0F883FB71ED0145000947462 /* Localizable.strings */,
 			);
 			path = Favorites;
 			sourceTree = "<group>";
@@ -316,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3C9C7211C7873980091CAB5 /* Assets.xcassets in Resources */,
+				0F883FB51ED0145000947462 /* Localizable.strings in Resources */,
 				A3C9C71F1C7873980091CAB5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,7 +351,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		9D4DA98522922AE31895FDE7 /* [CP] Copy Pods Resources */ = {
@@ -360,6 +376,9 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/SVProgressHUD.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 			);
 			outputPaths = (
 			);
@@ -417,6 +436,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		0F883FB71ED0145000947462 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0F883FB61ED0145000947462 /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		A3C9C71D1C7873980091CAB5 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

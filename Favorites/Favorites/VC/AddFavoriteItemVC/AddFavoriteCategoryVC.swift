@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import ReactiveCocoa
+import ReactiveSwift
 
 class AddFavoriteCategoryVC: BaseVC, UITextFieldDelegate {
 
@@ -36,8 +38,17 @@ class AddFavoriteCategoryVC: BaseVC, UITextFieldDelegate {
     }
     
     func checkValidMealName() {
-        let text = groupNameTextFiled.text ?? ""
-        saveButton.isEnabled = !text.isEmpty
+        saveButton.isEnabled = false
+        saveButton.reactive.isEnabled <~ groupNameTextFiled.reactive.continuousTextValues.map({ (text) -> Bool in
+            if let value = text {
+                if value.isEmpty {
+                    self.navigationItem.title = NSLocalizedString("AddCategoryTitle", comment: "")
+                } else {
+                    self.navigationItem.title = value
+                }
+            }
+            return !(text?.isEmpty)!
+        })
     }
     
     // MARK: - Navigation
@@ -53,14 +64,6 @@ class AddFavoriteCategoryVC: BaseVC, UITextFieldDelegate {
     }
     
     // MARk: UITextFiledDelegate
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        saveButton.isEnabled = false
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        checkValidMealName()
-        navigationItem.title = textField.text
-    }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         groupNameTextFiled.resignFirstResponder()
