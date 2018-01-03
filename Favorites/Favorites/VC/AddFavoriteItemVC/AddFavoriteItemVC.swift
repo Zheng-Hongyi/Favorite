@@ -63,7 +63,7 @@ class AddFavoriteItemVC: BaseVC, UITextFieldDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        if saveButton == sender as! UIBarButtonItem {
+        if saveButton == sender as? UIBarButtonItem {
             let nameText = itemNameTextFiled.text ?? ""
             let linkText = itemLInkTextFiled.text ?? ""
             currentItem = Favorite(name: nameText, source: linkText)

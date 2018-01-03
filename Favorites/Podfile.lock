@@ -1,23 +1,15 @@
 PODS:
-  - Alamofire (4.2.0)
-  - Bugly (2.4.7)
-  - LeanCloud (10.0.0):
-    - LeanCloud/Storage (= 10.0.0)
-  - LeanCloud/Storage (10.0.0):
-    - Alamofire (~> 4.2.0)
+  - Bugly (2.4.8)
   - UMengAnalytics-NO-IDFA (4.2.5)
 
 DEPENDENCIES:
   - Bugly (~> 2.4.7)
-  - LeanCloud (~> 10.0.0)
   - UMengAnalytics-NO-IDFA (~> 4.2.5)
 
 SPEC CHECKSUMS:
-  Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
-  Bugly: 2c256069145f550171907c5cb1c0f84ad291f6c1
-  LeanCloud: 0a6a0d52e33dd43d998ab256cc83f6c4954607b8
+  Bugly: da3c02408c14838d498429320545a8e439392978
   UMengAnalytics-NO-IDFA: 16666e32edce5be44ae5b14aaaa7f3582e09d6ab
 
-PODFILE CHECKSUM: dd22e57aa6715dad0c29ab75c39b23dbbca82a75
+PODFILE CHECKSUM: 067208e216b8e071aa14e2808474e7f8578d4063
 
 COCOAPODS: 1.3.1
