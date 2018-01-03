@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="g35-i0-Jo1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="g35-i0-Jo1">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,7 +26,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="234" y="236"/>
+            <point key="canvasLocation" x="-929" y="234"/>
         </scene>
         <!--Favorite HomeVC-->
         <scene sceneID="yYB-Ev-RGN">
@@ -41,11 +41,11 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="t6M-6f-pOp" id="uck-3C-zVX">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tot-99-0Xk">
-                                            <rect key="frame" x="14" y="0.0" width="320" height="44"/>
+                                            <rect key="frame" x="22" y="3" width="311" height="38"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -80,7 +80,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U0L-zk-92O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="842" y="991"/>
+            <point key="canvasLocation" x="-1447" y="1108"/>
         </scene>
         <!--输入分组名称-->
         <scene sceneID="kWx-LH-tUY">
@@ -129,7 +129,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="scb-YG-u4x" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="9dS-EQ-FmW" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1430" y="1999"/>
+            <point key="canvasLocation" x="-367" y="2019"/>
         </scene>
         <!--Favorite DetailVC-->
         <scene sceneID="WdQ-1W-p37">
@@ -163,7 +163,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EhV-0F-aEA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1968" y="979"/>
+            <point key="canvasLocation" x="996" y="1108"/>
         </scene>
         <!--Favorite Group DetailVC-->
         <scene sceneID="EJY-gX-9kj">
@@ -178,11 +178,11 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="C0q-Ci-JkR" id="WaZ-pB-G9p">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbi-kn-yKO">
-                                            <rect key="frame" x="14" y="0.0" width="359" height="44"/>
+                                            <rect key="frame" x="22" y="3" width="350" height="38"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -217,7 +217,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yCr-JP-5Mq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1442" y="979"/>
+            <point key="canvasLocation" x="-367" y="1108"/>
         </scene>
         <!--Add Favorite ItemVC-->
         <scene sceneID="YjD-qN-Xnz">
@@ -281,7 +281,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FR7-cx-jSG" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="x9z-Jg-22K" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1949" y="93"/>
+            <point key="canvasLocation" x="2012" y="233"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fyi-EP-BSu">
@@ -289,7 +289,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="g35-i0-Jo1" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HVY-WO-l3h">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                     </navigationBar>
@@ -300,7 +300,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xxE-8u-WgN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="214" y="979"/>
+            <point key="canvasLocation" x="-2684" y="1108"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SdM-lC-sre">
@@ -308,7 +308,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ycs-Yt-xZM" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2uG-hO-y65">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -318,7 +318,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HU4-rX-7He" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="849" y="1999"/>
+            <point key="canvasLocation" x="-1447" y="2019"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oPh-RT-BSN">
@@ -326,7 +326,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Gm4-fz-dOi" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="UKL-1s-PQa">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -336,7 +336,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E1s-1I-cVs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1419" y="93"/>
+            <point key="canvasLocation" x="1033" y="235"/>
         </scene>
     </scenes>
 </document>
