@@ -8,4 +8,5 @@ framework module ReactiveCocoa {
 
 module ReactiveCocoa.Swift {
     header "ReactiveCocoa-Swift.h"
+    requires objc
 }
