@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     var optionalInteger: Int?
-    var optionalValue: Optional<Int>
+    var optionalValue: Optional<Int> = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()

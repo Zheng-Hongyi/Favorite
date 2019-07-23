@@ -40,14 +40,12 @@ class AddFavoriteCategoryVC: BaseVC, UITextFieldDelegate {
     func checkValidMealName() {
         saveButton.isEnabled = false
         saveButton.reactive.isEnabled <~ groupNameTextFiled.reactive.continuousTextValues.map({ (text) -> Bool in
-            if let value = text {
-                if value.isEmpty {
-                    self.navigationItem.title = NSLocalizedString("AddCategoryTitle", comment: "")
-                } else {
-                    self.navigationItem.title = value
-                }
+            if text.isEmpty {
+                self.navigationItem.title = NSLocalizedString("AddCategoryTitle", comment: "")
+            } else {
+                self.navigationItem.title = text
             }
-            return !(text?.isEmpty)!
+            return !(text.isEmpty)
         })
     }
     
