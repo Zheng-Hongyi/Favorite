@@ -23,6 +23,7 @@ class AddFavoriteItemVC: BaseVC, UITextFieldDelegate {
         itemNameTextFiled.delegate = self;
         itemLInkTextFiled.delegate = self;
         checkValidMealName();
+        testPasteContent()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -87,4 +88,24 @@ class AddFavoriteItemVC: BaseVC, UITextFieldDelegate {
     }
 
 
+}
+
+extension AddFavoriteItemVC {
+    func testPasteContent() {
+        DispatchQueue.global().async {
+            if let paste = UIPasteboard.general.string {
+                let urlStr = Utils.detectUrl(input: paste)
+                if !urlStr.isEmpty {
+                    LinkParser.parse(link: urlStr, result: { (result) in
+                        DispatchQueue.main.async {
+                            self.itemLInkTextFiled.text = result.link
+                            self.itemNameTextFiled.text = result.title
+                            self.testPasteContent()
+                        }
+                    })
+                }
+            }
+        }
+        
+    }
 }
