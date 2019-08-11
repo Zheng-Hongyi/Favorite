@@ -100,7 +100,7 @@ extension AddFavoriteItemVC {
                         DispatchQueue.main.async {
                             self.itemLInkTextFiled.text = result.link
                             self.itemNameTextFiled.text = result.title
-                            self.testPasteContent()
+                            self.checkValidMealName()
                         }
                     })
                 }
