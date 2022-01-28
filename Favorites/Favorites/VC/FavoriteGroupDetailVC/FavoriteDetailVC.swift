@@ -7,20 +7,29 @@
 //
 
 import UIKit
+import WebKit
 
-class FavoriteDetailVC: BaseVC {
+class FavoriteDetailVC: BaseVC, WKNavigationDelegate {
 
-    @IBOutlet weak var mainWeb: UIWebView!
+    @IBOutlet weak var mainWeb: WKWebView!
+    @IBOutlet weak var goButton: UIButton!
     var currentFavorite : Favorite?
     
+    @IBOutlet weak var backButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        backButton.isEnabled = false
+        goButton.isEnabled = false
+        backButton.tintColor = .blue
+        goButton.tintColor = .blue
+        mainWeb.navigationDelegate = self
 
         // Do any additional setup after loading the view.
         self.title = currentFavorite!.name;
         //let url = NSURLRequest.init(URL: NSURL.init(string: currentFavorite!.source)!)
         let url = URLRequest.init(url: URL.init(string: currentFavorite!.source)!, cachePolicy: NSURLRequest.CachePolicy.returnCacheDataElseLoad, timeoutInterval: 60*60*24*7)
-        mainWeb.loadRequest(url)
+        mainWeb.load(url)
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,6 +38,24 @@ class FavoriteDetailVC: BaseVC {
     }
     
 
+    @IBAction func backAction(_ sender: Any) {
+        if mainWeb.canGoBack {
+            mainWeb.goBack()
+        }
+    }
+    
+    @IBAction func goAction(_ sender: Any) {
+        if mainWeb.canGoForward {
+            mainWeb.goForward()
+        }
+        
+    }
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        backButton.isEnabled = webView.canGoBack
+        goButton.isEnabled = webView.canGoForward
+    }
+    
     /*
     // MARK: - Navigation
 

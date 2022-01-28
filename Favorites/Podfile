@@ -1,9 +1,11 @@
-platform :ios, 8.0
+platform :ios, 12.0
 use_frameworks!
 def main_dependency
 pod 'UMengAnalytics-NO-IDFA', '~> 4.2.5'
 pod 'Bugly', '~> 2.4.7'
-
+pod 'RxSwift', '6.5.0'
+pod 'RxCocoa', '6.5.0'
+pod 'SVProgressHUD'
 end
 
 target "Favorites" do
