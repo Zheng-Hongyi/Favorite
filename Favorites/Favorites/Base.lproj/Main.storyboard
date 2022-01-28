@@ -33,7 +33,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="F0K-1Z-xEj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="GroupCell" rowHeight="44" id="t6M-6f-pOp" customClass="GroupCell" customModule="Favorites" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="375" height="44"/>
@@ -45,7 +45,6 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tot-99-0Xk">
                                             <rect key="frame" x="22" y="3" width="320.5" height="38"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -69,7 +68,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="JSZ-Wa-Pjk">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="wkA-TJ-Glu">
-                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" systemColor="labelColor"/>
                             <connections>
                                 <segue destination="Ycs-Yt-xZM" kind="presentation" identifier="AddGroup" id="n41-tM-KRO"/>
                             </connections>
@@ -98,7 +97,7 @@
                                 <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="bTy-UN-5Lr" secondAttribute="trailing" constant="14" id="4Eq-y6-fsa"/>
                             <constraint firstItem="bTy-UN-5Lr" firstAttribute="top" secondItem="ejA-Aa-uqw" secondAttribute="bottom" constant="14" id="Ew9-by-Jox"/>
@@ -107,13 +106,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="输入分组名称" id="KkS-Bk-G0u">
                         <barButtonItem key="leftBarButtonItem" title="取消 " id="2qo-Gz-3FD">
-                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" systemColor="labelColor"/>
                             <connections>
                                 <action selector="cancelAdd:" destination="oWf-J1-95K" id="8X4-mM-Nw8"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="保存" id="3rd-aN-KSj">
-                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" systemColor="labelColor"/>
                             <connections>
                                 <segue destination="9dS-EQ-FmW" kind="unwind" unwindAction="unwindToHomeList:" id="Jim-nb-xde"/>
                             </connections>
@@ -175,7 +174,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="UUC-qt-m2F" secondAttribute="trailing" id="3ty-lQ-gAJ"/>
                             <constraint firstItem="UUC-qt-m2F" firstAttribute="top" secondItem="gP1-pC-u5i" secondAttribute="bottom" id="4E9-Xb-PKZ"/>
@@ -205,7 +204,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="q57-Nn-sFe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="FavoriteCell" id="C0q-Ci-JkR" customClass="FavoriteCell" customModule="Favorites" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="375" height="44"/>
@@ -217,7 +216,6 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbi-kn-yKO">
                                             <rect key="frame" x="22" y="3" width="359.5" height="38"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -241,7 +239,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="Ne7-So-CBp">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="L9K-FK-Hrl">
-                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" systemColor="labelColor"/>
                             <connections>
                                 <segue destination="Gm4-fz-dOi" kind="presentation" identifier="AddFavoriteItem" id="Ssj-uV-f2h"/>
                             </connections>
@@ -281,7 +279,7 @@
                                 <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="dSE-zJ-ZDD" firstAttribute="leading" secondItem="Uvr-sq-3tY" secondAttribute="leadingMargin" constant="-6" id="6hY-pU-Od1"/>
                             <constraint firstItem="qM1-Pz-xXX" firstAttribute="top" secondItem="dSE-zJ-ZDD" secondAttribute="bottom" constant="14" id="C1e-a8-8cn"/>
@@ -293,13 +291,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="gpP-YE-ntH">
                         <barButtonItem key="leftBarButtonItem" title="取消" id="uNd-5j-9yV">
-                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" systemColor="labelColor"/>
                             <connections>
                                 <action selector="cancelAction:" destination="Xxx-m0-SKT" id="G65-BG-XKg"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="保存" id="Pmt-tZ-GjX">
-                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" systemColor="labelColor"/>
                             <connections>
                                 <segue destination="x9z-Jg-22K" kind="unwind" unwindAction="unwindToDetailList:" id="TQ7-To-Ubs"/>
                             </connections>
@@ -378,8 +376,14 @@
         <systemColor name="darkTextColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
