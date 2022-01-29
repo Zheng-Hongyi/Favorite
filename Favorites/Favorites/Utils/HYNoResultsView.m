@@ -48,7 +48,12 @@
         // Message Label
         _messageLabel               = [[UILabel alloc] init];
         _messageLabel.font          = [UIFont systemFontOfSize:14];
-        _messageLabel.textColor     = [UIColor blackColor];
+        if (@available(iOS 13.0, *)) {
+            _messageLabel.textColor     = [UIColor labelColor];
+        } else {
+            // Fallback on earlier versions
+            _messageLabel.textColor     = [UIColor blackColor];
+        }
         _messageLabel.numberOfLines = 0;
         _messageLabel.textAlignment = NSTextAlignmentCenter;
         
@@ -57,7 +62,12 @@
         _button.titleLabel.font     = [UIFont systemFontOfSize:14];
         _button.hidden              = YES;
         [_button addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
-        [_button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        if (@available(iOS 13.0, *)) {
+            [_button setTitleColor:[UIColor labelColor] forState:UIControlStateNormal];
+        } else {
+            // Fallback on earlier versions
+            [_button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        }
         [_button setBackgroundImage:[self newButtonBackgroundImage] forState:UIControlStateNormal];
         
         // Insert Subviews
@@ -125,7 +135,12 @@
     UIGraphicsBeginImageContextWithOptions(fillRect.size, NO, [[UIScreen mainScreen] scale]);
     CGContextRef context    = UIGraphicsGetCurrentContext();
     
-    CGContextSetStrokeColorWithColor(context, [UIColor blackColor].CGColor);
+    if (@available(iOS 13.0, *)) {
+        CGContextSetStrokeColorWithColor(context, [UIColor labelColor].CGColor);
+    } else {
+        // Fallback on earlier versions
+        CGContextSetStrokeColorWithColor(context, [UIColor blackColor].CGColor);
+    }
     CGContextAddPath(context, [UIBezierPath bezierPathWithRoundedRect:CGRectInset(fillRect, 1, 1) cornerRadius:2.0].CGPath);
     CGContextStrokePath(context);
     
