@@ -1,8 +1,12 @@
-platform :ios, 8.0
+platform :ios, 13.0
 use_frameworks!
 def main_dependency
-pod 'UMengAnalytics-NO-IDFA', '~> 4.2.5'
-pod 'Bugly', '~> 2.4.7'
+pod 'UMengAnalytics-NO-IDFA'
+pod 'Bugly'
+pod 'SVProgressHUD'
+pod 'ReactiveCocoa'
+pod 'ReactiveSwift'
+
 
 end
 

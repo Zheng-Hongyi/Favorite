@@ -14,6 +14,28 @@ class BaseNavigationController: UINavigationController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        if let aColor = UIColor.init(named: "color_text") {
+            let appearance = UINavigationBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.shadowImage = nil
+            appearance.shadowColor = UIColor.clear
+            appearance.titleTextAttributes = [.foregroundColor: aColor, .font: UIFont.boldSystemFont(ofSize: 20)]
+            self.navigationBar.standardAppearance = appearance
+            self.navigationBar.scrollEdgeAppearance = self.navigationBar.standardAppearance
+            self.navigationBar.barTintColor = aColor
+            self.navigationBar.tintColor = aColor
+            
+//            let tbAppearance = UIToolbarAppearance()
+//            tbAppearance.configureWithOpaqueBackground()
+//            tbAppearance.shadowImage = nil
+//            tbAppearance.shadowColor = .white
+//            self.toolbar.standardAppearance = tbAppearance
+//            if #available(iOS 15.0, *) {
+//                self.toolbar.scrollEdgeAppearance = self.toolbar.standardAppearance
+//            } else {
+//                // Fallback on earlier versions
+//            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

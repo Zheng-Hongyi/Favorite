@@ -14,6 +14,7 @@ class BaseVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        view.backgroundColor = UIColor(named: "color_main")
     }
 
     override func didReceiveMemoryWarning() {

@@ -1,20 +1,33 @@
 PODS:
-  - Bugly (2.4.8)
+  - Bugly (2.5.71)
+  - ReactiveCocoa (12.0.0):
+    - ReactiveSwift (~> 7.0)
+  - ReactiveSwift (7.0.0)
+  - SVProgressHUD (2.2.5)
   - UMengAnalytics-NO-IDFA (4.2.5)
 
 DEPENDENCIES:
-  - Bugly (~> 2.4.7)
-  - UMengAnalytics-NO-IDFA (~> 4.2.5)
+  - Bugly
+  - ReactiveCocoa
+  - ReactiveSwift
+  - SVProgressHUD
+  - UMengAnalytics-NO-IDFA
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - Bugly
+    - ReactiveCocoa
+    - ReactiveSwift
+    - SVProgressHUD
     - UMengAnalytics-NO-IDFA
 
 SPEC CHECKSUMS:
-  Bugly: da3c02408c14838d498429320545a8e439392978
+  Bugly: fd066c75c4a0eca1440f9b6a84bd37d51bfc85ac
+  ReactiveCocoa: 5d10386f0ce09f922006efbf784881c5fade27c5
+  ReactiveSwift: 48c4b9d3b497e8dd20b10300bb1a28ff93550f13
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   UMengAnalytics-NO-IDFA: 16666e32edce5be44ae5b14aaaa7f3582e09d6ab
 
-PODFILE CHECKSUM: 067208e216b8e071aa14e2808474e7f8578d4063
+PODFILE CHECKSUM: 0e1b510b29fe62ac6342fab1a099418683a9168a
 
-COCOAPODS: 1.7.4
+COCOAPODS: 1.11.2

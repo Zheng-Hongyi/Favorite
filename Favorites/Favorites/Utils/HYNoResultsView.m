@@ -48,7 +48,7 @@
         // Message Label
         _messageLabel               = [[UILabel alloc] init];
         _messageLabel.font          = [UIFont systemFontOfSize:14];
-        _messageLabel.textColor     = [UIColor blackColor];
+        _messageLabel.textColor     = [UIColor colorNamed:@"color_text"];
         _messageLabel.numberOfLines = 0;
         _messageLabel.textAlignment = NSTextAlignmentCenter;
         
@@ -57,7 +57,7 @@
         _button.titleLabel.font     = [UIFont systemFontOfSize:14];
         _button.hidden              = YES;
         [_button addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
-        [_button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_button setTitleColor:[UIColor colorNamed:@"color_text"] forState:UIControlStateNormal];
         [_button setBackgroundImage:[self newButtonBackgroundImage] forState:UIControlStateNormal];
         
         // Insert Subviews
@@ -125,7 +125,7 @@
     UIGraphicsBeginImageContextWithOptions(fillRect.size, NO, [[UIScreen mainScreen] scale]);
     CGContextRef context    = UIGraphicsGetCurrentContext();
     
-    CGContextSetStrokeColorWithColor(context, [UIColor blackColor].CGColor);
+    CGContextSetStrokeColorWithColor(context, [UIColor colorNamed:@"color_text"].CGColor);
     CGContextAddPath(context, [UIBezierPath bezierPathWithRoundedRect:CGRectInset(fillRect, 1, 1) cornerRadius:2.0].CGPath);
     CGContextStrokePath(context);
     
