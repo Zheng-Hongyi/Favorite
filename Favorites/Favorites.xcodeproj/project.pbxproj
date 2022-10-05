@@ -11,9 +11,6 @@
 		0F7BB37E1CE7231100D6C73C /* LogicBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7BB37D1CE7231100D6C73C /* LogicBus.swift */; };
 		0F7BB3801CE7235500D6C73C /* HomeLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7BB37F1CE7235500D6C73C /* HomeLogic.swift */; };
 		0F7BB3821CE736E400D6C73C /* GroupDetailLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7BB3811CE736E400D6C73C /* GroupDetailLogic.swift */; };
-		0F883FB01ECFCB7A00947462 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F883FAD1ECFCB7A00947462 /* ReactiveCocoa.framework */; };
-		0F883FB11ECFCB7A00947462 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F883FAE1ECFCB7A00947462 /* ReactiveSwift.framework */; };
-		0F883FB21ECFCB7A00947462 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F883FAF1ECFCB7A00947462 /* Result.framework */; };
 		0F883FB51ED0145000947462 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0F883FB71ED0145000947462 /* Localizable.strings */; };
 		0FA2BE8E1C9CF7EB0095CA45 /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA2BE8D1C9CF7EB0095CA45 /* FavoriteCell.swift */; };
 		0FA2BE901C9CFC820095CA45 /* FavoriteDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA2BE8F1C9CFC820095CA45 /* FavoriteDetailVC.swift */; };
@@ -34,7 +31,6 @@
 		A3030CDF1C8C3F3C00134CCA /* FavoriteCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3030CDE1C8C3F3C00134CCA /* FavoriteCategory.swift */; };
 		A3030CE21C8C722E00134CCA /* AddFavoriteCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3030CE11C8C722E00134CCA /* AddFavoriteCategoryVC.swift */; };
 		A31C49EA1C95B85600232775 /* AddFavoriteItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31C49E91C95B85600232775 /* AddFavoriteItemVC.swift */; };
-		A3A49C871ECF009B00C97CED /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A49C861ECF009B00C97CED /* SVProgressHUD.framework */; };
 		A3C9C71A1C7873980091CAB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C9C7191C7873980091CAB5 /* AppDelegate.swift */; };
 		A3C9C71C1C7873980091CAB5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C9C71B1C7873980091CAB5 /* ViewController.swift */; };
 		A3C9C71F1C7873980091CAB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3C9C71D1C7873980091CAB5 /* Main.storyboard */; };
@@ -106,10 +102,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				19CE3A3122FF03360072CE3A /* libxml2.tbd in Frameworks */,
-				0F883FB01ECFCB7A00947462 /* ReactiveCocoa.framework in Frameworks */,
-				0F883FB11ECFCB7A00947462 /* ReactiveSwift.framework in Frameworks */,
-				0F883FB21ECFCB7A00947462 /* Result.framework in Frameworks */,
-				A3A49C871ECF009B00C97CED /* SVProgressHUD.framework in Frameworks */,
 				CC7EE88F8CDD1BE0AEA7340E /* Pods_Favorites.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -607,7 +599,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 75A9A091F52A6AB0358CD928 /* Pods-Favorites.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: ZHENG HONGYI (7T366LQLPX)";
@@ -644,7 +635,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7F49896C53F49368EA835061 /* Pods-Favorites.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: ZHENG HONGYI (7T366LQLPX)";
