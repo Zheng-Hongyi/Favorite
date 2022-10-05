@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import ReactiveCocoa
-import ReactiveSwift
+import RxCocoa
+import RxSwift
 
 class AddFavoriteCategoryVC: BaseVC, UITextFieldDelegate {
 
@@ -39,14 +39,17 @@ class AddFavoriteCategoryVC: BaseVC, UITextFieldDelegate {
     
     func checkValidMealName() {
         saveButton.isEnabled = false
-        saveButton.reactive.isEnabled <~ groupNameTextFiled.reactive.continuousTextValues.map({ (text) -> Bool in
-            if text.isEmpty {
-                self.navigationItem.title = NSLocalizedString("AddCategoryTitle", comment: "")
-            } else {
-                self.navigationItem.title = text
-            }
-            return !(text.isEmpty)
-        })
+        groupNameTextFiled.rx.text.subscribe { [weak self]aString in
+            self?.updateSavaButton(aString)
+        }
+    }
+    
+    func updateSavaButton(_ aString: String?) {
+        guard let name = aString else {
+            saveButton.isEnabled = false
+            return
+        }
+        saveButton.isEnabled = name.count > 0
     }
     
     // MARK: - Navigation
