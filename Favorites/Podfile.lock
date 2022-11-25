@@ -1,33 +1,38 @@
 PODS:
   - Bugly (2.5.71)
-  - ReactiveCocoa (12.0.0):
-    - ReactiveSwift (~> 7.0)
-  - ReactiveSwift (7.0.0)
+  - RxCocoa (6.5.0):
+    - RxRelay (= 6.5.0)
+    - RxSwift (= 6.5.0)
+  - RxRelay (6.5.0):
+    - RxSwift (= 6.5.0)
+  - RxSwift (6.5.0)
   - SVProgressHUD (2.2.5)
   - UMengAnalytics-NO-IDFA (4.2.5)
 
 DEPENDENCIES:
   - Bugly
-  - ReactiveCocoa
-  - ReactiveSwift
+  - RxCocoa
+  - RxSwift
   - SVProgressHUD
   - UMengAnalytics-NO-IDFA
 
 SPEC REPOS:
   trunk:
     - Bugly
-    - ReactiveCocoa
-    - ReactiveSwift
+    - RxCocoa
+    - RxRelay
+    - RxSwift
     - SVProgressHUD
     - UMengAnalytics-NO-IDFA
 
 SPEC CHECKSUMS:
   Bugly: fd066c75c4a0eca1440f9b6a84bd37d51bfc85ac
-  ReactiveCocoa: 5d10386f0ce09f922006efbf784881c5fade27c5
-  ReactiveSwift: 48c4b9d3b497e8dd20b10300bb1a28ff93550f13
+  RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
+  RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
+  RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   UMengAnalytics-NO-IDFA: 16666e32edce5be44ae5b14aaaa7f3582e09d6ab
 
-PODFILE CHECKSUM: 0e1b510b29fe62ac6342fab1a099418683a9168a
+PODFILE CHECKSUM: 7493348272e92fad4065e05b6f75c68407199fd9
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.11.3

@@ -1,11 +1,12 @@
 platform :ios, 13.0
-use_frameworks!
+#use_frameworks!
 def main_dependency
+  use_frameworks!
 pod 'UMengAnalytics-NO-IDFA'
 pod 'Bugly'
 pod 'SVProgressHUD'
-pod 'ReactiveCocoa'
-pod 'ReactiveSwift'
+pod 'RxSwift'
+pod 'RxCocoa'
 
 
 end
